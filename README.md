@@ -1,16 +1,120 @@
-# React + Vite
+# VISHNU BANK — Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive digital banking web application built with React and Vite, designed to provide customers and administrators with a clean interface for managing banking operations.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+VISHNU BANK is the frontend for a full-stack banking application. It communicates with a Spring Boot REST API to support authentication, account management, beneficiaries, transactions, and administrative operations.
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Authentication** — Login, registration, and password-reset interfaces.
+- **Customer dashboard** — Access banking features through a centralized interface.
+- **Account management** — View and manage banking accounts.
+- **Beneficiary management** — Manage beneficiary details.
+- **Transactions** — Access transaction-related features.
+- **Admin dashboard** — Interfaces for administrative operations.
+- **Responsive UI** — Layouts designed for desktop and smaller screens.
 
-## Expanding the ESLint configuration
+*Feature availability depends on the corresponding backend APIs and completed integrations.*
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Technology Stack
+
+- React
+- Vite
+- JavaScript
+- HTML5
+- CSS3
+- React Router
+- REST API integration
+
+## Architecture
+
+The frontend communicates with the Spring Boot backend over HTTP. The backend handles business logic, authentication, and database operations.
+
+```text
+User
+  |
+  v
+React Frontend
+  |
+  v
+Spring Boot REST API
+  |
+  v
+MySQL Database
+```
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js and npm
+- Git
+
+### Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/YOUR_USERNAME/banking-frontend.git
+cd banking-frontend
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Vite will display the local URL in the terminal.
+
+### Production Build
+
+To create a production build:
+
+```bash
+npm run build
+```
+
+To preview the production build locally:
+
+```bash
+npm run preview
+```
+
+## Environment Configuration
+
+Configure the backend API base URL using the environment-variable name expected by the frontend code. For Vite, client-side environment variables generally use the `VITE_` prefix.
+
+Example `.env.example`:
+
+```env
+VITE_API_BASE_URL=http://localhost:8080
+```
+
+Use the actual variable name expected by your API configuration. Do not commit real credentials or private secrets to GitHub.
+
+## Deployment
+
+The planned deployment architecture is:
+
+- **Frontend:** Netlify
+- **Backend:** Render
+- **Database:** Aiven MySQL
+
+The production frontend must use the deployed backend URL rather than `localhost`.
+
+## Project Status
+
+The frontend is being prepared for deployment. Backend deployment has been completed, and frontend deployment and end-to-end verification are pending.
+
+## Author
+
+Developed as a full-stack Java banking application portfolio project.
