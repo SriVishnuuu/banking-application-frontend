@@ -1,0 +1,1107 @@
+.admin-account-details-page {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/* ================================
+   PAGE HEADER
+================================ */
+
+.admin-account-details-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 28px;
+}
+
+.admin-account-back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    margin-bottom: 18px;
+    color: #60736D;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.admin-account-back-link:hover {
+    color: #0E3B30;
+}
+
+.admin-account-title-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.admin-account-title-icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #0E3B30;
+    background: #E3CFA0;
+    border: 1px solid #D4BD8A;
+    border-radius: 12px;
+}
+
+.admin-account-eyebrow {
+    margin: 0 0 4px;
+    color: #A88B4A;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.admin-account-title-row h1 {
+    margin: 0;
+    color: #12382F;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.3px;
+    word-break: break-word;
+}
+
+.admin-account-id {
+    margin: 5px 0 0;
+    color: #7A8A84;
+    font-size: 12px;
+}
+
+.admin-account-status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 8px 13px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    white-space: nowrap;
+}
+
+.admin-account-status-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: currentColor;
+}
+
+/* ================================
+   STATUS COLORS
+================================ */
+
+.status-active {
+    color: #287A5A;
+    background: #E8F4EE;
+    border: 1px solid #C6E4D3;
+}
+
+.status-inactive {
+    color: #806C35;
+    background: #F5F0DF;
+    border: 1px solid #E5D9B7;
+}
+
+.status-frozen {
+    color: #8A6A2E;
+    background: #F5EDDA;
+    border: 1px solid #E4D5AE;
+}
+
+.status-closed {
+    color: #8B4B4B;
+    background: #F8EAEA;
+    border: 1px solid #E9CACA;
+}
+
+/* ================================
+   SUCCESS / ERROR
+================================ */
+
+.admin-account-success-message,
+.admin-account-action-error {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 48px;
+    margin-bottom: 20px;
+    padding: 12px 15px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.admin-account-success-message {
+    color: #236A4D;
+    background: #EAF5EF;
+    border: 1px solid #C8E3D3;
+}
+
+.admin-account-action-error {
+    color: #9A4040;
+    background: #FBEDED;
+    border: 1px solid #EBCFCF;
+}
+
+.admin-account-action-error button {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    padding: 0;
+    color: inherit;
+    background: transparent;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.admin-account-action-error button:hover {
+    background: rgba(181, 71, 71, 0.08);
+}
+
+/* ================================
+   BALANCE CARD
+================================ */
+
+.admin-account-balance-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 24px;
+    padding: 25px 28px;
+    background:
+        linear-gradient(
+            135deg,
+            #0E3B30 0%,
+            #16483B 58%,
+            #1B5041 100%
+        );
+    border: 1px solid #0B3027;
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(14, 59, 48, 0.12);
+    box-sizing: border-box;
+}
+
+.admin-account-balance-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.admin-account-balance-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #E3CFA0;
+    background: rgba(227, 207, 160, 0.12);
+    border: 1px solid rgba(227, 207, 160, 0.25);
+    border-radius: 11px;
+}
+
+.admin-account-balance-content p {
+    margin: 0 0 4px;
+    color: #BFD0C9;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.admin-account-balance-content h2 {
+    margin: 0;
+    color: #FFFFFF;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+}
+
+.admin-account-balance-meta {
+    min-width: 130px;
+    padding-left: 24px;
+    border-left: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.admin-account-balance-meta span {
+    display: block;
+    margin-bottom: 5px;
+    color: #AFC4BC;
+    font-size: 11px;
+}
+
+.admin-account-balance-meta strong {
+    color: #E3CFA0;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* ================================
+   DETAILS GRID
+================================ */
+
+.admin-account-details-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    margin-bottom: 24px;
+}
+
+.admin-account-details-card {
+    min-width: 0;
+    padding: 22px;
+    background: #FFFFFF;
+    border: 1px solid #D9E1DC;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(14, 59, 48, 0.035);
+    box-sizing: border-box;
+}
+
+.admin-account-card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-bottom: 17px;
+    margin-bottom: 4px;
+    border-bottom: 1px solid #E7ECE9;
+}
+
+.admin-account-card-icon {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #0E3B30;
+    background: #EEF3F0;
+    border: 1px solid #DCE7E1;
+    border-radius: 9px;
+}
+
+.admin-account-card-header h2 {
+    margin: 0 0 3px;
+    color: #12382F;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.admin-account-card-header p {
+    margin: 0;
+    color: #7A8A84;
+    font-size: 11px;
+}
+
+.admin-account-info-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-account-info-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    min-height: 48px;
+    padding: 9px 0;
+    border-bottom: 1px solid #EDF1EF;
+}
+
+.admin-account-info-item:last-child {
+    border-bottom: none;
+}
+
+.admin-account-info-label {
+    color: #71817B;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.admin-account-info-value {
+    max-width: 65%;
+    color: #193F35;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: right;
+    word-break: break-word;
+}
+
+.admin-account-email-value {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 6px;
+}
+
+.admin-account-email-value svg {
+    flex-shrink: 0;
+    color: #71817B;
+}
+
+.admin-account-ifsc {
+    color: #0E3B30;
+    letter-spacing: 0.6px;
+}
+
+.admin-account-number {
+    color: #0E3B30;
+    letter-spacing: 0.4px;
+}
+
+.admin-account-inline-status {
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 9px;
+    border-radius: 15px;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+/* ================================
+   MANAGEMENT SECTION
+   Same structure as detail cards
+================================ */
+
+.admin-account-management-section {
+    display: grid;
+
+    /* Equal width, matching the cards above */
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.admin-account-management-card {
+    min-width: 0;
+    padding: 22px;
+    background: #FFFFFF;
+    border: 1px solid #D9E1DC;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(14, 59, 48, 0.035);
+    box-sizing: border-box;
+}
+
+/* Same header treatment as the cards above */
+.admin-account-management-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-bottom: 17px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #E7ECE9;
+}
+
+.admin-account-management-icon {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #0E3B30;
+    background: #EEF3F0;
+    border: 1px solid #DCE7E1;
+    border-radius: 9px;
+}
+
+.admin-account-management-icon.deposit-icon {
+    color: #8A6A2E;
+    background: #F5F0E2;
+    border-color: #E6D9B8;
+}
+
+.admin-account-management-header h2 {
+    margin: 0 0 3px;
+    color: #12382F;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.admin-account-management-header p {
+    margin: 0;
+    color: #7A8A84;
+    font-size: 11px;
+}
+
+/* ================================
+   STATUS MANAGEMENT
+================================ */
+
+.admin-account-status-management {
+    width: 100%;
+}
+
+.admin-account-status-selector {
+    width: 100%;
+}
+
+.admin-account-status-selector label,
+.admin-account-form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #35564C;
+    font-size: 12px;
+    font-weight: 650;
+}
+
+.admin-account-status-selector select {
+    width: 100%;
+    height: 44px;
+    padding: 0 38px 0 13px;
+    color: #193F35;
+    background-color: #FFFFFF;
+    border: 1px solid #CDD9D3;
+    border-radius: 8px;
+    outline: none;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.admin-account-status-selector select:focus {
+    border-color: #8EAD9F;
+    box-shadow: 0 0 0 3px rgba(14, 59, 48, 0.07);
+}
+
+.admin-account-status-selector select:disabled {
+    color: #89958F;
+    background: #F3F5F4;
+    cursor: not-allowed;
+}
+
+.admin-account-status-selector p {
+    margin: 10px 0 0;
+    color: #7A8A84;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+/* ================================
+   DEPOSIT FORM
+================================ */
+
+.admin-account-deposit-form {
+    width: 100%;
+}
+
+.admin-account-form-row {
+    display: grid;
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+    gap: 16px;
+}
+
+.admin-account-form-group {
+    min-width: 0;
+}
+
+.admin-account-form-group input {
+    width: 100%;
+    height: 44px;
+    padding: 0 12px;
+    color: #193F35;
+    background: #FFFFFF;
+    border: 1px solid #CDD9D3;
+    border-radius: 8px;
+    outline: none;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: 13px;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.admin-account-form-group input:focus {
+    border-color: #8EAD9F;
+    box-shadow: 0 0 0 3px rgba(14, 59, 48, 0.07);
+}
+
+.admin-account-form-group input::placeholder {
+    color: #9AA6A1;
+}
+
+.admin-account-form-group input:disabled {
+    color: #89958F;
+    background: #F3F5F4;
+    cursor: not-allowed;
+}
+
+.admin-account-form-group small {
+    display: block;
+    margin-top: 6px;
+    color: #89958F;
+    font-size: 10px;
+}
+
+.admin-account-input-wrapper {
+    position: relative;
+}
+
+.admin-account-input-wrapper > span {
+    position: absolute;
+    top: 50%;
+    left: 13px;
+    transform: translateY(-50%);
+    color: #61766D;
+    font-size: 13px;
+    font-weight: 600;
+    pointer-events: none;
+}
+
+.admin-account-input-wrapper input {
+    padding-left: 29px;
+}
+
+.admin-account-deposit-footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 20px;
+    padding-top: 18px;
+    border-top: 1px solid #E7ECE9;
+}
+
+.admin-account-deposit-warning {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin: 0 auto 0 0;
+    color: #8A6A2E;
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+.admin-account-deposit-warning svg {
+    flex-shrink: 0;
+}
+
+.admin-account-deposit-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    min-width: 145px;
+    height: 42px;
+    padding: 0 17px;
+    color: #FFFFFF;
+    background: #0E3B30;
+    border: 1px solid #0E3B30;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 650;
+    cursor: pointer;
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.15s ease;
+}
+
+.admin-account-deposit-button:hover:not(:disabled) {
+    background: #174D3E;
+    border-color: #174D3E;
+    transform: translateY(-1px);
+}
+
+.admin-account-deposit-button:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.admin-account-deposit-button:disabled {
+    color: #9AA6A1;
+    background: #E9EEEB;
+    border-color: #E0E7E3;
+    cursor: not-allowed;
+}
+
+/* ================================
+   LOADING
+================================ */
+
+.admin-account-details-loading {
+    min-height: 420px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    color: #71817B;
+}
+
+.admin-account-details-loading p {
+    margin: 0;
+    font-size: 13px;
+}
+
+.admin-account-loading-spinner {
+    width: 30px;
+    height: 30px;
+    border: 3px solid #DDE6E1;
+    border-top-color: #0E3B30;
+    border-radius: 50%;
+    animation: adminAccountSpin 0.8s linear infinite;
+}
+
+@keyframes adminAccountSpin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ================================
+   ERROR
+================================ */
+
+.admin-account-details-error {
+    max-width: 520px;
+    min-height: 420px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 40px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.admin-account-error-icon {
+    width: 54px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    color: #B54747;
+    background: #FBEDED;
+    border: 1px solid #EBCFCF;
+    border-radius: 50%;
+}
+
+.admin-account-details-error h2 {
+    margin: 0 0 8px;
+    color: #12382F;
+    font-size: 20px;
+}
+
+.admin-account-details-error p {
+    max-width: 400px;
+    margin: 0;
+    color: #71817B;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.admin-account-error-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 22px;
+}
+
+.admin-account-back-button,
+.admin-account-retry-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    height: 40px;
+    padding: 0 15px;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 650;
+    cursor: pointer;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.admin-account-back-button {
+    color: #0E3B30;
+    background: #EEF3F0;
+    border: 1px solid #D5E1DB;
+}
+
+.admin-account-back-button:hover {
+    background: #E3EBE6;
+}
+
+.admin-account-retry-button {
+    color: #FFFFFF;
+    background: #0E3B30;
+    border: 1px solid #0E3B30;
+}
+
+.admin-account-retry-button:hover {
+    background: #174D3E;
+}
+
+/* ================================
+   MODAL
+================================ */
+
+.admin-account-modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(12, 31, 26, 0.52);
+    box-sizing: border-box;
+}
+
+.admin-account-confirmation-modal {
+    width: 100%;
+    max-width: 440px;
+    padding: 27px;
+    background: #FFFFFF;
+    border: 1px solid #D9E1DC;
+    border-radius: 14px;
+    box-shadow: 0 18px 50px rgba(9, 35, 28, 0.2);
+    box-sizing: border-box;
+    animation: adminAccountModalIn 0.18s ease-out;
+}
+
+@keyframes adminAccountModalIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.admin-account-modal-icon {
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    color: #0E3B30;
+    background: #EEF3F0;
+    border: 1px solid #D7E3DD;
+    border-radius: 11px;
+}
+
+.admin-account-modal-icon.deposit-modal-icon {
+    color: #8A6A2E;
+    background: #F5F0E2;
+    border-color: #E5D8B8;
+}
+
+.admin-account-confirmation-modal h2 {
+    margin: 0 0 10px;
+    color: #12382F;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.admin-account-confirmation-modal > p {
+    margin: 0 0 10px;
+    color: #60736D;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.admin-account-confirmation-modal > p strong {
+    color: #193F35;
+    font-weight: 700;
+}
+
+.admin-account-modal-warning {
+    margin-top: 13px !important;
+    padding: 11px 12px;
+    color: #806C35 !important;
+    background: #F8F4E8;
+    border: 1px solid #E9DEBF;
+    border-radius: 8px;
+    font-size: 11px !important;
+}
+
+.admin-account-deposit-summary {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 15px;
+    margin: 16px 0 4px;
+    padding: 12px;
+    background: #F4F6F2;
+    border: 1px solid #E0E7E3;
+    border-radius: 8px;
+}
+
+.admin-account-deposit-summary span {
+    color: #71817B;
+    font-size: 11px;
+}
+
+.admin-account-deposit-summary strong {
+    max-width: 65%;
+    color: #193F35;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: right;
+    word-break: break-word;
+}
+
+.admin-account-modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 23px;
+}
+
+.admin-account-modal-cancel,
+.admin-account-modal-confirm {
+    min-width: 100px;
+    height: 40px;
+    padding: 0 15px;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 650;
+    cursor: pointer;
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.15s ease;
+}
+
+.admin-account-rupee-icon {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.admin-account-button-rupee {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.admin-account-modal-cancel {
+    color: #526861;
+    background: #F4F6F2;
+    border: 1px solid #D9E1DC;
+}
+
+.admin-account-modal-cancel:hover:not(:disabled) {
+    background: #EAEFEB;
+}
+
+.admin-account-modal-confirm {
+    color: #FFFFFF;
+    background: #0E3B30;
+    border: 1px solid #0E3B30;
+}
+
+.admin-account-modal-confirm:hover:not(:disabled) {
+    background: #174D3E;
+    border-color: #174D3E;
+}
+
+.admin-account-modal-confirm.deposit-confirm-button {
+    background: #8A6A2E;
+    border-color: #8A6A2E;
+}
+
+.admin-account-modal-confirm.deposit-confirm-button:hover:not(:disabled) {
+    background: #755923;
+    border-color: #755923;
+}
+
+.admin-account-modal-cancel:disabled,
+.admin-account-modal-confirm:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.admin-account-modal-cancel:active:not(:disabled),
+.admin-account-modal-confirm:active:not(:disabled) {
+    transform: translateY(1px);
+}
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 1050px) {
+    .admin-account-details-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-account-management-section {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-account-form-row {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 700px) {
+    .admin-account-details-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 17px;
+    }
+
+    .admin-account-status-badge {
+        align-self: flex-start;
+    }
+
+    .admin-account-title-row h1 {
+        font-size: 23px;
+    }
+
+    .admin-account-title-icon {
+        width: 44px;
+        height: 44px;
+    }
+
+    .admin-account-balance-card {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 20px;
+        padding: 21px;
+    }
+
+    .admin-account-balance-meta {
+        width: 100%;
+        padding-top: 15px;
+        padding-left: 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.14);
+        border-left: none;
+    }
+
+    .admin-account-balance-content h2 {
+        font-size: 25px;
+    }
+
+    .admin-account-form-row {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .admin-account-deposit-footer {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .admin-account-deposit-warning {
+        margin: 0;
+    }
+
+    .admin-account-deposit-button {
+        width: 100%;
+    }
+}
+
+/* ================================
+   SMALL MOBILE
+================================ */
+
+@media (max-width: 500px) {
+    .admin-account-details-header {
+        margin-bottom: 22px;
+    }
+
+    .admin-account-title-row {
+        align-items: flex-start;
+        gap: 11px;
+    }
+
+    .admin-account-title-icon {
+        width: 41px;
+        height: 41px;
+        border-radius: 10px;
+    }
+
+    .admin-account-title-row h1 {
+        font-size: 20px;
+    }
+
+    .admin-account-eyebrow {
+        font-size: 10px;
+    }
+
+    .admin-account-details-card,
+    .admin-account-management-card {
+        padding: 18px;
+    }
+
+    .admin-account-info-item {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 5px;
+        padding: 11px 0;
+    }
+
+    .admin-account-info-value {
+        max-width: 100%;
+        text-align: left;
+    }
+
+    .admin-account-email-value {
+        justify-content: flex-start;
+    }
+
+    .admin-account-modal-overlay {
+        align-items: flex-end;
+        padding: 0;
+    }
+
+    .admin-account-confirmation-modal {
+        max-width: none;
+        padding: 23px 20px;
+        border-radius: 16px 16px 0 0;
+    }
+
+    .admin-account-modal-actions {
+        flex-direction: column-reverse;
+    }
+
+    .admin-account-modal-cancel,
+    .admin-account-modal-confirm {
+        width: 100%;
+    }
+
+    .admin-account-error-actions {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .admin-account-back-button,
+    .admin-account-retry-button {
+        width: 100%;
+    }
+}

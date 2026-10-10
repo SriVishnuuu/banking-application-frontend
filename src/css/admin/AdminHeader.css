@@ -1,0 +1,178 @@
+.admin-header {
+    position: sticky;
+    top: 0;
+    z-index: 900;
+    width: 100%;
+    background: #FFFFFF;
+    border-bottom: 1px solid #D9E1DC;
+    box-sizing: border-box;
+}
+
+.admin-header-content {
+    min-height: 92px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 30px;
+    box-sizing: border-box;
+}
+
+.admin-header-title {
+    min-width: 0;
+}
+
+.admin-header-eyebrow {
+    margin: 0 0 5px;
+    color: #A88B4A;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.admin-header-title h1 {
+    margin: 0;
+    color: #12382F;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.admin-header-description {
+    margin: 5px 0 0;
+    color: #60736D;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.admin-header-profile {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    flex-shrink: 0;
+    padding-left: 25px;
+}
+
+.admin-header-avatar {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: #0E3B30;
+    color: #E3CFA0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.admin-header-user {
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-header-user-name {
+    color: #12382F;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.admin-header-user-role {
+    margin-top: 3px;
+    color: #8FA49C;
+    font-size: 10px;
+}
+
+/* =========================
+   TABLET / MOBILE
+   ========================= */
+
+@media (max-width: 900px) {
+
+    .admin-header-content {
+        min-height: 76px;
+        padding: 16px 24px 16px 72px;
+    }
+
+    .admin-header-title h1 {
+        font-size: 22px;
+    }
+
+    .admin-header-description {
+        font-size: 11px;
+    }
+
+    .admin-header-profile {
+        padding-left: 18px;
+    }
+}
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 600px) {
+
+    .admin-header {
+        min-height: 72px;
+    }
+
+    .admin-header-content {
+        min-height: 72px;
+        padding: 15px 16px 15px 68px;
+    }
+
+    .admin-header-eyebrow {
+        margin-bottom: 3px;
+        font-size: 9px;
+        letter-spacing: 1.3px;
+    }
+
+    .admin-header-title h1 {
+        font-size: 20px;
+    }
+
+    .admin-header-description {
+        margin-top: 3px;
+        font-size: 10px;
+    }
+
+    .admin-header-profile {
+        padding-left: 12px;
+    }
+
+    .admin-header-user {
+        display: none;
+    }
+
+    .admin-header-avatar {
+        width: 36px;
+        height: 36px;
+    }
+}
+
+/* =========================
+   SMALL MOBILE
+   ========================= */
+
+@media (max-width: 400px) {
+
+    .admin-header-content {
+        padding-left: 64px;
+    }
+
+    .admin-header-description {
+        display: none;
+    }
+
+    .admin-header-title h1 {
+        font-size: 19px;
+    }
+
+    .admin-header-profile {
+        padding-left: 8px;
+    }
+
+    .admin-header-avatar {
+        width: 34px;
+        height: 34px;
+    }
+}

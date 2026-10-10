@@ -1,0 +1,808 @@
+.lux-loading-screen {
+    --emerald: #0E3B30;
+    --deep-emerald: #082B23;
+    --gold: #A88B4A;
+    --champagne: #E3CFA0;
+    --muted: #60736D;
+
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
+    padding: 24px;
+    box-sizing: border-box;
+    overflow: hidden;
+    isolation: isolate;
+    background:
+        radial-gradient(
+            ellipse at 50% 37%,
+            rgba(227, 207, 160, 0.23),
+            transparent 40%
+        ),
+        linear-gradient(145deg, #FFFFFF 0%, #F4F6F2 100%);
+    color: var(--emerald);
+}
+
+.lux-loading-screen::before,
+.lux-loading-screen::after {
+    position: absolute;
+    z-index: -1;
+    content: "";
+    width: 520px;
+    height: 520px;
+    border: 1px solid rgba(168, 139, 74, 0.09);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.lux-loading-screen::before {
+    top: -390px;
+    left: -260px;
+}
+
+.lux-loading-screen::after {
+    right: -270px;
+    bottom: -410px;
+}
+
+.lux-loading-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 620px;
+    min-width: 0;
+    text-align: center;
+    animation: lux-content-enter 700ms ease-out both;
+}
+
+/* ==============================
+   BANK ANIMATION SCENE
+============================== */
+
+.lux-scene {
+    position: relative;
+    width: min(100%, 600px);
+    height: 250px;
+    margin-bottom: 2px;
+    isolation: isolate;
+}
+
+.lux-flow-lines {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    animation: lux-trail-breathe 4s ease-in-out infinite;
+}
+
+.lux-notes-layer {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+}
+
+/* ==============================
+   CURRENCY NOTES
+============================== */
+
+.lux-note {
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    display: block;
+    width: 65px;
+    height: 37px;
+    padding: 3px;
+    box-sizing: border-box;
+    border: 1px solid #729780;
+    border-radius: 4px;
+    background: linear-gradient(
+        135deg,
+        #E4EFE2,
+        #A9C7AE 48%,
+        #D8E8D4
+    );
+    color: #174C3A;
+    box-shadow:
+        0 5px 13px rgba(14, 59, 48, 0.12),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.7);
+    opacity: 0;
+    will-change: transform, opacity;
+}
+
+.lux-note-border {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border: 1px solid rgba(23, 76, 58, 0.38);
+    border-radius: 2px;
+}
+
+.lux-note-symbol {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.lux-note-seal {
+    position: absolute;
+    top: 50%;
+    right: 3px;
+    display: grid;
+    place-items: center;
+    width: 13px;
+    height: 13px;
+    border: 1px solid rgba(23, 76, 58, 0.48);
+    border-radius: 50%;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 8px;
+    font-weight: 700;
+    transform: translateY(-50%);
+}
+
+.lux-note-corner {
+    position: absolute;
+    top: 0;
+    left: 3px;
+    font-size: 7px;
+    opacity: 0.8;
+}
+
+.lux-note-corner-end {
+    top: auto;
+    right: 3px;
+    bottom: 0;
+    left: auto;
+}
+
+.lux-note-gold {
+    border-color: #B5944D;
+    background: linear-gradient(
+        135deg,
+        #FFF2CD,
+        #D9B968 48%,
+        #F8E7B6
+    );
+    color: #765A25;
+    box-shadow:
+        0 5px 13px rgba(168, 139, 74, 0.16),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.75);
+}
+
+.lux-note-gold .lux-note-border {
+    border-color: rgba(118, 90, 37, 0.42);
+}
+
+.lux-note-left {
+    left: -72px;
+    animation: lux-note-in-left 3.8s cubic-bezier(0.35, 0, 0.2, 1) infinite;
+    animation-delay: var(--delay);
+}
+
+.lux-note-right {
+    right: -72px;
+    animation: lux-note-in-right 3.8s cubic-bezier(0.35, 0, 0.2, 1) infinite;
+    animation-delay: var(--delay);
+}
+
+/* Different curved paths */
+
+.lane-one {
+    --start-y: 18%;
+    --middle-y: 6%;
+    --end-y: 46%;
+    --rotation: -13deg;
+}
+
+.lane-two {
+    --start-y: 43%;
+    --middle-y: -3%;
+    --end-y: 51%;
+    --rotation: 12deg;
+}
+
+.lane-three {
+    --start-y: 68%;
+    --middle-y: 5%;
+    --end-y: 55%;
+    --rotation: -8deg;
+}
+
+/* ==============================
+   CENTRAL BANK EMBLEM
+============================== */
+
+.lux-bank-halo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 4;
+    display: grid;
+    place-items: center;
+    width: 144px;
+    height: 144px;
+    border: 1px solid rgba(168, 139, 74, 0.2);
+    border-radius: 50%;
+    background: radial-gradient(
+        circle,
+        rgba(255, 255, 255, 0.96) 0%,
+        rgba(255, 255, 255, 0.76) 57%,
+        rgba(227, 207, 160, 0.12) 72%,
+        transparent 73%
+    );
+    box-shadow: 0 0 45px rgba(227, 207, 160, 0.16);
+    transform: translate(-50%, -50%);
+}
+
+.lux-bank-halo::before {
+    position: absolute;
+    inset: 8px;
+    content: "";
+    border: 1px solid rgba(168, 139, 74, 0.24);
+    border-radius: 50%;
+}
+
+.lux-bank-emblem {
+    position: relative;
+    width: 91px;
+    height: 99px;
+    border: 1px solid rgba(168, 139, 74, 0.52);
+    border-radius: 5px;
+    background: linear-gradient(
+        145deg,
+        #FFFFFF 0%,
+        #FBF7EC 58%,
+        #E9D8AF 100%
+    );
+    box-shadow:
+        0 8px 23px rgba(14, 59, 48, 0.12),
+        inset 0 0 0 3px rgba(255, 255, 255, 0.6);
+    animation: lux-bank-breathe 3.2s ease-in-out infinite;
+}
+
+.lux-bank-roof {
+    position: absolute;
+    top: 9px;
+    left: 13px;
+    display: grid;
+    place-items: center;
+    width: 63px;
+    height: 35px;
+    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+    background: linear-gradient(
+        135deg,
+        #E8D29A,
+        #A88B4A 55%,
+        #D8BB76
+    );
+}
+
+.lux-bank-roof span {
+    margin-top: 10px;
+    color: #0E3B30;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.lux-bank-entablature {
+    position: absolute;
+    top: 43px;
+    left: 13px;
+    width: 63px;
+    height: 4px;
+    border-radius: 1px;
+    background: linear-gradient(
+        90deg,
+        #A88B4A,
+        #F2DEA9,
+        #A88B4A
+    );
+}
+
+.lux-bank-columns {
+    position: absolute;
+    top: 49px;
+    left: 17px;
+    display: flex;
+    gap: 5px;
+    width: 55px;
+    height: 32px;
+}
+
+.lux-bank-columns span {
+    flex: 1;
+    border: 1px solid #B3914B;
+    border-radius: 2px 2px 0 0;
+    background: linear-gradient(
+        90deg,
+        #C8A65D,
+        #FFF9E8 48%,
+        #D2B16A
+    );
+    box-shadow: inset 0 0 2px rgba(255, 255, 255, 0.8);
+}
+
+.lux-bank-foundation {
+    position: absolute;
+    bottom: 7px;
+    left: 10px;
+    width: 69px;
+    height: 4px;
+    border-radius: 2px;
+    background: linear-gradient(
+        90deg,
+        #927039,
+        #F0D99D,
+        #A88B4A
+    );
+}
+
+/* Subtle gold particles */
+
+.lux-scene-spark {
+    position: absolute;
+    z-index: 3;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--gold);
+    box-shadow: 0 0 10px rgba(168, 139, 74, 0.6);
+    animation: lux-sparkle 2.4s ease-in-out infinite;
+}
+
+.lux-spark-one {
+    top: 22%;
+    left: 24%;
+}
+
+.lux-spark-two {
+    top: 72%;
+    left: 33%;
+    animation-delay: 0.7s;
+}
+
+.lux-spark-three {
+    top: 28%;
+    right: 25%;
+    animation-delay: 1.2s;
+}
+
+.lux-spark-four {
+    right: 32%;
+    bottom: 18%;
+    animation-delay: 1.7s;
+}
+
+/* ==============================
+   BRANDING
+============================== */
+
+.lux-brand {
+    width: 100%;
+}
+
+.lux-brand-overline {
+    margin: 0 0 9px;
+    color: var(--muted);
+    font-size: 8px;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+.lux-brand h1 {
+    margin: 0;
+    color: var(--deep-emerald);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(30px, 5vw, 39px);
+    font-weight: 600;
+    letter-spacing: 3px;
+    line-height: 1.25;
+}
+
+.lux-brand h1 span {
+    color: var(--emerald);
+    font-weight: 700;
+}
+
+.lux-brand-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    margin: 15px auto 12px;
+}
+
+.lux-brand-divider > span:not(.lux-divider-diamond) {
+    width: 34px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold));
+}
+
+.lux-brand-divider > span:last-child {
+    transform: rotate(180deg);
+}
+
+.lux-divider-diamond {
+    width: 5px;
+    height: 5px;
+    background: var(--gold);
+    transform: rotate(45deg);
+}
+
+.lux-tagline {
+    margin: 0;
+    color: var(--gold);
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 3.4px;
+}
+
+/* ==============================
+   LOADING STATUS
+============================== */
+
+.lux-loading-status {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 31px;
+}
+
+.lux-progress-track {
+    position: relative;
+    width: min(100%, 270px);
+    height: 5px;
+    overflow: hidden;
+    border: 1px solid rgba(168, 139, 74, 0.26);
+    border-radius: 10px;
+    background: rgba(168, 139, 74, 0.08);
+}
+
+.lux-progress-shimmer {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -42%;
+    width: 42%;
+    border-radius: inherit;
+    background: linear-gradient(
+        90deg,
+        #A88B4A,
+        #F4E4B5,
+        #A88B4A
+    );
+    box-shadow: 0 0 12px rgba(168, 139, 74, 0.3);
+    animation: lux-progress 1.65s ease-in-out infinite;
+}
+
+.lux-loading-message {
+    margin: 17px 0 0;
+    color: #60736D;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.lux-loading-dots {
+    display: flex;
+    gap: 6px;
+    margin-top: 12px;
+}
+
+.lux-loading-dots span {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--gold);
+    animation: lux-dot 1.2s ease-in-out infinite;
+}
+
+.lux-loading-dots span:nth-child(2) {
+    animation-delay: 0.15s;
+}
+
+.lux-loading-dots span:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.lux-security-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin: 28px 0 0;
+    color: var(--muted);
+    font-size: 8px;
+    font-weight: 600;
+    letter-spacing: 2.2px;
+}
+
+/* ==============================
+   ANIMATION KEYFRAMES
+============================== */
+
+@keyframes lux-note-in-left {
+    0% {
+        opacity: 0;
+        transform: translate(0, var(--start-y)) rotate(var(--rotation)) scale(0.8);
+    }
+
+    12% {
+        opacity: 1;
+    }
+
+    40% {
+        opacity: 0.95;
+        transform: translate(115px, var(--middle-y)) rotate(5deg) scale(1);
+    }
+
+    76% {
+        opacity: 0.9;
+        transform: translate(225px, var(--end-y)) rotate(-8deg) scale(0.85);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(290px, 0) rotate(12deg) scale(0.3);
+    }
+}
+
+@keyframes lux-note-in-right {
+    0% {
+        opacity: 0;
+        transform: translate(0, var(--start-y)) rotate(calc(var(--rotation) * -1)) scale(0.8);
+    }
+
+    12% {
+        opacity: 1;
+    }
+
+    40% {
+        opacity: 0.95;
+        transform: translate(-115px, var(--middle-y)) rotate(-5deg) scale(1);
+    }
+
+    76% {
+        opacity: 0.9;
+        transform: translate(-225px, var(--end-y)) rotate(8deg) scale(0.85);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(-290px, 0) rotate(-12deg) scale(0.3);
+    }
+}
+
+@keyframes lux-bank-breathe {
+    0%, 100% {
+        box-shadow:
+            0 8px 23px rgba(14, 59, 48, 0.12),
+            inset 0 0 0 3px rgba(255, 255, 255, 0.6);
+    }
+
+    50% {
+        box-shadow:
+            0 10px 30px rgba(14, 59, 48, 0.17),
+            inset 0 0 0 3px rgba(255, 255, 255, 0.8);
+    }
+}
+
+@keyframes lux-trail-breathe {
+    0%, 100% {
+        opacity: 0.6;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes lux-sparkle {
+    0%, 100% {
+        opacity: 0.2;
+        transform: scale(0.7);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.5);
+    }
+}
+
+@keyframes lux-progress {
+    0% {
+        left: -42%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+@keyframes lux-dot {
+    0%, 60%, 100% {
+        opacity: 0.35;
+        transform: translateY(0);
+    }
+
+    30% {
+        opacity: 1;
+        transform: translateY(-3px);
+    }
+}
+
+@keyframes lux-content-enter {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==============================
+   RESPONSIVE
+============================== */
+
+@media (max-width: 600px) {
+    .lux-loading-screen {
+        padding: 18px;
+    }
+
+    .lux-scene {
+        height: 215px;
+    }
+
+    .lux-bank-halo {
+        width: 125px;
+        height: 125px;
+    }
+
+    .lux-bank-emblem {
+        transform: scale(0.88);
+    }
+
+    .lux-note {
+        width: 52px;
+        height: 31px;
+    }
+
+    .lux-note-symbol {
+        font-size: 20px;
+    }
+
+    .lux-note-left {
+        left: -25px;
+    }
+
+    .lux-note-right {
+        right: -25px;
+    }
+
+    .lux-brand h1 {
+        font-size: clamp(27px, 7vw, 34px);
+        letter-spacing: 2px;
+    }
+
+    .lux-tagline {
+        font-size: 8px;
+        letter-spacing: 2px;
+    }
+
+    .lux-brand-overline {
+        letter-spacing: 2px;
+    }
+
+    .lux-loading-status {
+        margin-top: 26px;
+    }
+
+    .lux-security-label {
+        margin-top: 24px;
+        letter-spacing: 1.6px;
+    }
+
+    @keyframes lux-note-in-left {
+        0% {
+            opacity: 0;
+            transform: translate(0, var(--start-y)) rotate(var(--rotation)) scale(0.75);
+        }
+
+        12% {
+            opacity: 0.95;
+        }
+
+        40% {
+            opacity: 0.9;
+            transform: translate(70px, var(--middle-y)) rotate(5deg) scale(0.9);
+        }
+
+        76% {
+            opacity: 0.85;
+            transform: translate(145px, var(--end-y)) rotate(-8deg) scale(0.75);
+        }
+
+        100% {
+            opacity: 0;
+            transform: translate(175px, 0) rotate(12deg) scale(0.25);
+        }
+    }
+
+    @keyframes lux-note-in-right {
+        0% {
+            opacity: 0;
+            transform: translate(0, var(--start-y)) rotate(calc(var(--rotation) * -1)) scale(0.75);
+        }
+
+        12% {
+            opacity: 0.95;
+        }
+
+        40% {
+            opacity: 0.9;
+            transform: translate(-70px, var(--middle-y)) rotate(-5deg) scale(0.9);
+        }
+
+        76% {
+            opacity: 0.85;
+            transform: translate(-145px, var(--end-y)) rotate(8deg) scale(0.75);
+        }
+
+        100% {
+            opacity: 0;
+            transform: translate(-175px, 0) rotate(-12deg) scale(0.25);
+        }
+    }
+}
+
+@media (max-height: 650px) and (min-width: 601px) {
+    .lux-scene {
+        height: 190px;
+    }
+
+    .lux-bank-halo {
+        transform: translate(-50%, -50%) scale(0.88);
+    }
+
+    .lux-loading-status {
+        margin-top: 20px;
+    }
+
+    .lux-security-label {
+        margin-top: 18px;
+    }
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+    .lux-loading-content,
+    .lux-flow-lines,
+    .lux-note,
+    .lux-bank-emblem,
+    .lux-scene-spark,
+    .lux-progress-shimmer,
+    .lux-loading-dots span {
+        animation: none !important;
+    }
+
+    .lux-note {
+        opacity: 0;
+    }
+}

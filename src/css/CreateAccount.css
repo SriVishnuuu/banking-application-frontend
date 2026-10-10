@@ -1,0 +1,634 @@
+.create-account-page {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 42px 32px 60px;
+}
+
+
+/* =========================
+   HEADER
+   ========================= */
+
+.create-account-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 35px;
+}
+
+.page-eyebrow {
+    margin: 0 0 7px;
+    color: #A88B4A;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+
+.create-account-header h1 {
+    margin: 0;
+    color: #12382F;
+    font-size: 34px;
+}
+
+.create-account-header p:last-child {
+    margin: 9px 0 0;
+    color: #60736D;
+    font-size: 15px;
+}
+
+.back-link {
+    color: #A88B4A;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   LAYOUT
+   ========================= */
+
+.create-account-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) minmax(280px, 0.8fr);
+    gap: 24px;
+    align-items: start;
+}
+
+
+/* =========================
+   FORM CARD
+   ========================= */
+
+.create-account-card {
+    padding: 30px;
+    background: #FFFFFF;
+    border: 1px solid #D9E1DC;
+    border-radius: 14px;
+    box-shadow: 0 5px 18px rgba(18, 56, 47, 0.05);
+}
+
+.form-card-heading {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-bottom: 24px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #E7ECE9;
+}
+
+.form-icon {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 11px;
+    background: #F4EFE3;
+    color: #A88B4A;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.form-card-heading h2 {
+    margin: 0;
+    color: #12382F;
+    font-size: 21px;
+}
+
+.form-card-heading p {
+    margin: 5px 0 0;
+    color: #60736D;
+    font-size: 13px;
+}
+
+
+/* =========================
+   FORM
+   ========================= */
+
+.create-form-field {
+    margin-bottom: 23px;
+}
+
+.create-form-field label {
+    display: block;
+    margin-bottom: 8px;
+    color: #12382F;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.create-form-field select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 13px;
+    border: 1px solid #D9E1DC;
+    border-radius: 8px;
+    background: #FFFFFF;
+    color: #12382F;
+    font-size: 14px;
+    outline: none;
+    cursor: pointer;
+}
+
+.create-form-field select:focus {
+    border-color: #A88B4A;
+    box-shadow: 0 0 0 3px rgba(168, 139, 74, 0.12);
+}
+
+.create-form-field select:disabled {
+    background: #F4F6F2;
+    cursor: not-allowed;
+}
+
+.field-help {
+    display: block;
+    margin-top: 7px;
+    color: #8FA49C;
+    font-size: 12px;
+}
+
+
+/* Field-specific validation */
+
+.create-form-field select.field-invalid {
+    border-color: #B54747;
+}
+
+.create-form-field select.field-invalid:focus {
+    border-color: #B54747;
+    outline: 2px solid rgba(181, 71, 71, 0.12);
+}
+
+.create-field-error {
+    display: block;
+    margin-top: 7px;
+    color: #B54747;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+
+
+/* =========================
+   ACTIONS
+   ========================= */
+
+.create-account-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 30px;
+    padding-top: 22px;
+    border-top: 1px solid #E7ECE9;
+}
+
+.primary-button,
+.secondary-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 11px 18px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.primary-button {
+    border: none;
+    background: #0E3B30;
+    color: #FFFFFF;
+}
+
+.primary-button:hover {
+    background: #164C3F;
+}
+
+.primary-button:disabled {
+    opacity: 0.65;
+    cursor: wait;
+}
+
+.secondary-button {
+    border: 1px solid #D9E1DC;
+    background: #FFFFFF;
+    color: #60736D;
+}
+
+.secondary-button:hover {
+    background: #F4F6F2;
+}
+
+
+/* =========================
+   INFO CARD
+   ========================= */
+
+.account-opening-info {
+    padding: 28px;
+    background: #F4F6F2;
+    border: 1px solid #D9E1DC;
+    border-radius: 14px;
+}
+
+.info-card-icon {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+    border-radius: 10px;
+    background: #A88B4A;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.account-opening-info h2 {
+    margin: 0;
+    color: #12382F;
+    font-size: 20px;
+}
+
+.account-opening-info > p {
+    margin: 10px 0 25px;
+    color: #60736D;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+}
+
+.info-list > div {
+    display: flex;
+    gap: 12px;
+}
+
+.info-list > div > span {
+    flex-shrink: 0;
+    color: #A88B4A;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.info-list strong {
+    display: block;
+    color: #12382F;
+    font-size: 13px;
+}
+
+.info-list p {
+    margin: 4px 0 0;
+    color: #60736D;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+
+/* =========================
+   MESSAGES
+   ========================= */
+
+.create-account-error,
+.create-account-success {
+    margin-bottom: 20px;
+    padding: 12px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+}
+
+.create-account-error {
+    background: #FCEEEE;
+    border: 1px solid #E9BABA;
+    color: #B54747;
+}
+
+.create-account-success {
+    background: #E8F3ED;
+    border: 1px solid #B8D9C8;
+    color: #287A5A;
+}
+
+
+/* =========================
+   LOADING
+   ========================= */
+
+.create-account-loading {
+    padding: 80px 20px;
+    text-align: center;
+    color: #60736D;
+}
+
+
+/* =========================================
+   ACCOUNT CREATION CONFIRMATION OVERLAY
+   ========================================= */
+
+.create-account-confirmation-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: rgba(10, 35, 29, 0.48);
+    backdrop-filter: blur(3px);
+    box-sizing: border-box;
+}
+
+.create-account-confirmation-modal {
+    position: relative;
+    width: 100%;
+    max-width: 460px;
+    max-height: calc(100vh - 48px);
+    overflow-y: auto;
+    padding: 30px;
+    background: #FFFFFF;
+    border: 1px solid #D9E1DC;
+    border-radius: 14px;
+    box-shadow: 0 20px 50px rgba(14, 59, 48, 0.16);
+    box-sizing: border-box;
+    animation: create-account-modal-in 0.18s ease-out;
+}
+
+@keyframes create-account-modal-in {
+    from {
+        opacity: 0;
+        transform: translateY(8px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.create-account-confirmation-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: 1px solid #E1E7E3;
+    border-radius: 8px;
+    background: #F7F9F7;
+    color: #60736D;
+    cursor: pointer;
+}
+
+.create-account-confirmation-close:hover {
+    background: #EEF3F0;
+    color: #12382F;
+}
+
+.create-account-confirmation-close:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+.create-account-confirmation-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    border: 1px solid #D9E1DC;
+    border-radius: 11px;
+    background: #E7EEEA;
+    color: #0E3B30;
+}
+
+.create-account-confirmation-eyebrow {
+    margin: 0 0 7px;
+    color: #A88B4A;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+
+.create-account-confirmation-modal h2 {
+    margin: 0 35px 10px 0;
+    color: #12382F;
+    font-size: 22px;
+    line-height: 1.3;
+    font-weight: 700;
+}
+
+.create-account-confirmation-description {
+    margin: 0;
+    color: #60736D;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.create-account-confirmation-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-top: 22px;
+    padding: 5px 16px;
+    border: 1px solid #D9E1DC;
+    border-radius: 10px;
+    background: #F8FAF8;
+}
+
+.create-account-confirmation-details > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 14px 0;
+}
+
+.create-account-confirmation-details > div + div {
+    border-top: 1px solid #E7ECE9;
+}
+
+.create-account-confirmation-details span {
+    color: #60736D;
+    font-size: 12px;
+}
+
+.create-account-confirmation-details strong {
+    color: #12382F;
+    font-size: 13px;
+    font-weight: 700;
+    text-align: right;
+    overflow-wrap: anywhere;
+}
+
+.create-account-confirmation-notice {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 18px;
+    padding: 12px;
+    border: 1px solid #E8DAB8;
+    border-radius: 9px;
+    background: #FBF7ED;
+    color: #8A6B2F;
+}
+
+.create-account-confirmation-notice svg {
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+
+.create-account-confirmation-notice p {
+    margin: 0;
+    color: #725D35;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.create-account-confirmation-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.create-account-confirmation-cancel,
+.create-account-confirmation-confirm {
+    min-height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 0 16px;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.create-account-confirmation-cancel {
+    border: 1px solid #D9E1DC;
+    background: #FFFFFF;
+    color: #60736D;
+}
+
+.create-account-confirmation-cancel:hover {
+    background: #F5F7F5;
+    color: #12382F;
+}
+
+.create-account-confirmation-confirm {
+    border: 1px solid #0E3B30;
+    background: #0E3B30;
+    color: #FFFFFF;
+}
+
+.create-account-confirmation-confirm:hover {
+    border-color: #123F33;
+    background: #123F33;
+}
+
+.create-account-confirmation-cancel:disabled,
+.create-account-confirmation-confirm:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.create-account-confirmation-spinner {
+    animation: create-account-confirmation-spin 0.8s linear infinite;
+}
+
+@keyframes create-account-confirmation-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 500px) {
+    .create-account-confirmation-overlay {
+        padding: 16px;
+    }
+
+    .create-account-confirmation-modal {
+        padding: 25px 21px;
+        border-radius: 12px;
+    }
+
+    .create-account-confirmation-modal h2 {
+        font-size: 20px;
+    }
+
+    .create-account-confirmation-actions {
+        flex-direction: column-reverse;
+    }
+
+    .create-account-confirmation-cancel,
+    .create-account-confirmation-confirm {
+        width: 100%;
+    }
+}
+
+
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 800px) {
+
+    .create-account-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .create-account-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 550px) {
+
+    .create-account-page {
+        padding: 30px 18px 45px;
+    }
+
+    .create-account-header h1 {
+        font-size: 28px;
+    }
+
+    .create-account-card {
+        padding: 22px;
+    }
+
+    .create-account-actions {
+        flex-direction: column-reverse;
+    }
+
+    .create-account-actions .primary-button,
+    .create-account-actions .secondary-button {
+        width: 100%;
+    }
+}

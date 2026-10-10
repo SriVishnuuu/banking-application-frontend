@@ -1,0 +1,888 @@
+/* =========================
+   PAGE
+========================= */
+
+.transfer-page {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 38px 32px 70px;
+    color: #12382F;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.transfer-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.transfer-eyebrow,
+.transfer-section-eyebrow {
+    margin: 0 0 8px;
+    color: #A88B4A;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+}
+
+.transfer-header h1 {
+    margin: 0;
+    color: #12382F;
+    font-size: 32px;
+    line-height: 1.2;
+    letter-spacing: -0.6px;
+}
+
+.transfer-header > div > p:last-child {
+    margin: 10px 0 0;
+    color: #60736D;
+    font-size: 14px;
+}
+
+.transfer-back-button {
+    flex-shrink: 0;
+    padding: 12px 18px;
+    border: 1px solid #D9E1DC;
+    border-radius: 9px;
+    background: #FFFFFF;
+    color: #0E3B30;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.transfer-back-button:hover {
+    background: #F4F6F2;
+    border-color: #D6C28F;
+}
+
+/* =========================
+   LOADING
+========================= */
+
+.transfer-loading {
+    max-width: 570px;
+    margin: 120px auto;
+    padding: 35px;
+    text-align: center;
+    color: #60736D;
+    font-size: 14px;
+}
+
+/* =========================
+   INITIAL ERROR
+========================= */
+
+.transfer-error-card {
+    max-width: 570px;
+    margin: 120px auto;
+    padding: 40px 32px;
+    text-align: center;
+    background: #FFFFFF;
+    border: 1px solid #D9E1DC;
+    border-radius: 14px;
+    box-shadow:
+        0 5px 18px rgba(14, 59, 48, 0.05);
+}
+
+.transfer-error-icon {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+    border-radius: 50%;
+    background: #FCEEEE;
+    color: #B54747;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.transfer-error-card h2 {
+    margin: 0 0 10px;
+    color: #12382F;
+    font-size: 19px;
+}
+
+.transfer-error-card p {
+    margin: 0 0 24px;
+    color: #60736D;
+    font-size: 14px;
+}
+
+.transfer-error-button {
+    padding: 11px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #0E3B30;
+    color: #FFFFFF;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.transfer-error-button:hover {
+    background: #12382F;
+}
+
+/* =========================
+   BUSINESS ERROR
+========================= */
+
+.transfer-operation-error {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 22px;
+    padding: 15px 17px;
+    border: 1px solid #E8BABA;
+    border-radius: 10px;
+    background: #FCEEEE;
+    color: #9F3F3F;
+}
+
+.operation-error-icon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: #FCE5E5;
+    color: #B54747;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.transfer-operation-error strong {
+    display: block;
+    margin-bottom: 3px;
+    font-size: 14px;
+}
+
+.transfer-operation-error p {
+    margin: 0;
+    color: #B54747;
+    font-size: 13px;
+}
+
+/* =========================
+   SUCCESS
+========================= */
+
+.transfer-success {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 22px;
+    padding: 14px 16px;
+    border: 1px solid #B8DCC9;
+    border-radius: 10px;
+    background: #EAF5EF;
+    color: #287A5A;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.transfer-success-icon {
+    width: 23px;
+    height: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #E1F2E8;
+    color: #287A5A;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.transfer-content {
+    display: grid;
+    grid-template-columns: minmax(0, 1.65fr) minmax(280px, 0.85fr);
+    gap: 24px;
+    align-items: start;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.transfer-form-card,
+.transfer-summary-card {
+    background: #FFFFFF;
+    border: 1px solid #D9E1DC;
+    border-radius: 14px;
+    box-shadow:
+        0 4px 16px rgba(14, 59, 48, 0.035);
+}
+
+.transfer-form-card {
+    padding: 28px;
+}
+
+.transfer-summary-card {
+    padding: 26px;
+    position: sticky;
+    top: 100px;
+}
+
+/* =========================
+   CARD HEADER
+========================= */
+
+.transfer-card-header {
+    margin-bottom: 26px;
+}
+
+.transfer-card-header h2 {
+    margin: 0;
+    color: #12382F;
+    font-size: 20px;
+    letter-spacing: -0.2px;
+}
+
+.transfer-card-header > p:last-child {
+    margin: 8px 0 0;
+    color: #60736D;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* =========================
+   FORM
+========================= */
+
+.transfer-field {
+    margin-bottom: 21px;
+}
+
+.transfer-field label {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-bottom: 8px;
+    color: #315047;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.optional-label {
+    color: #8FA49C;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.transfer-field select,
+.transfer-field input,
+.transfer-field textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #C7D2CC;
+    border-radius: 8px;
+    background: #FFFFFF;
+    color: #12382F;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.transfer-field select,
+.transfer-field input {
+    height: 46px;
+    padding: 0 13px;
+}
+
+.transfer-field textarea {
+    padding: 12px 13px;
+    resize: vertical;
+}
+
+.transfer-field select:focus,
+.transfer-field input:focus,
+.transfer-field textarea:focus {
+    border-color: #A88B4A;
+    box-shadow:
+        0 0 0 3px rgba(168, 139, 74, 0.12);
+}
+
+.transfer-field select:disabled,
+.transfer-field input:disabled,
+.transfer-field textarea:disabled {
+    background: #F4F6F2;
+    cursor: not-allowed;
+}
+
+/* =========================
+   FIELD ERROR
+========================= */
+
+.field-invalid {
+    border-color: #B54747 !important;
+}
+
+.field-error {
+    margin: 6px 0 0;
+    color: #B54747;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.transfer-field-hint {
+    margin: 7px 0 0;
+    color: #60736D;
+    font-size: 12px;
+}
+
+.transfer-field-hint a {
+    color: #0E3B30;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.transfer-field-hint a:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   AMOUNT
+========================= */
+
+.amount-input-wrapper {
+    display: flex;
+    align-items: center;
+    height: 46px;
+    box-sizing: border-box;
+    border: 1px solid #C7D2CC;
+    border-radius: 8px;
+    overflow: hidden;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.amount-input-wrapper:focus-within {
+    border-color: #A88B4A;
+    box-shadow:
+        0 0 0 3px rgba(168, 139, 74, 0.12);
+}
+
+.amount-input-wrapper.field-invalid {
+    border-color: #B54747 !important;
+}
+
+.currency-symbol {
+    padding-left: 14px;
+    color: #60736D;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.amount-input-wrapper input {
+    height: 100%;
+    border: none !important;
+    box-shadow: none !important;
+    padding-left: 8px;
+}
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.description-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 6px;
+    color: #8FA49C;
+    font-size: 11px;
+}
+
+/* =========================
+   SUBMIT
+========================= */
+
+.transfer-submit-button {
+    width: 100%;
+    height: 46px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 8px;
+    background: #0E3B30;
+    color: #FFFFFF;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.transfer-submit-button:hover:not(:disabled) {
+    background: #12382F;
+}
+
+.transfer-submit-button:disabled {
+    background: #8FA49C;
+    cursor: not-allowed;
+}
+
+/* =========================
+   SUMMARY
+========================= */
+
+.summary-details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.summary-item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.summary-item span,
+.summary-amount span {
+    color: #60736D;
+    font-size: 12px;
+}
+
+.summary-item strong {
+    color: #12382F;
+    font-size: 14px;
+}
+
+.summary-divider {
+    height: 1px;
+    background: #D9E1DC;
+}
+
+.summary-amount {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.summary-amount strong {
+    color: #12382F;
+    font-size: 24px;
+}
+
+.transfer-security-note {
+    display: flex;
+    gap: 9px;
+    margin-top: 28px;
+    padding: 13px;
+    border-radius: 9px;
+    background: #F1E9D5;
+}
+
+.security-icon {
+    color: #A88B4A;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.transfer-security-note p {
+    margin: 0;
+    color: #60736D;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.transfer-type-options {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px;
+    gap: 3px;
+    width: fit-content;
+    border-radius: 9px;
+    background: #EEF1EE;
+    border: 1px solid #D9E1DC;
+}
+
+.transfer-type-option {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 145px;
+    height: 38px;
+    padding: 0 18px;
+
+    border: none;
+    border-radius: 6px;
+
+    background: transparent;
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.transfer-type-option input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.transfer-type-option span {
+    font-size: 13px;
+    font-weight: 600;
+    color: #60736D;
+    white-space: nowrap;
+}
+
+.transfer-type-option.selected {
+    background: #0E3B30;
+    box-shadow: 0 2px 5px rgba(14, 59, 48, 0.18);
+}
+
+.transfer-type-option.selected span {
+    color: #FFFFFF;
+}
+
+.transfer-type-option:hover:not(.selected) {
+    background: #E3E9E4;
+}
+
+/* TRANSFER CONFIRMATION OVERLAY */
+.transfer-confirmation-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: rgba(10, 35, 29, 0.52);
+    backdrop-filter: blur(4px);
+    box-sizing: border-box;
+}
+
+.transfer-confirmation-modal {
+    position: relative;
+    width: 100%;
+    max-width: 470px;
+    max-height: calc(100vh - 48px);
+    overflow-y: auto;
+    padding: 30px;
+    background: #FFFFFF;
+    border: 1px solid #D9E1DC;
+    border-radius: 15px;
+    box-shadow: 0 22px 60px rgba(14, 59, 48, 0.2);
+    box-sizing: border-box;
+    animation: transfer-confirmation-enter 0.18s ease-out;
+}
+
+@keyframes transfer-confirmation-enter {
+    from {
+        opacity: 0;
+        transform: translateY(8px) scale(0.985);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.transfer-confirmation-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: 1px solid #D9E1DC;
+    border-radius: 9px;
+    background: #F7F9F7;
+    color: #60736D;
+    cursor: pointer;
+}
+
+.transfer-confirmation-close:hover {
+    background: #EEF3F0;
+    color: #12382F;
+}
+
+.transfer-confirmation-close:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+.transfer-confirmation-icon {
+    width: 49px;
+    height: 49px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 19px;
+    border: 1px solid #D9E1DC;
+    border-radius: 12px;
+    background: #E7EEEA;
+    color: #0E3B30;
+}
+
+.transfer-confirmation-eyebrow {
+    margin: 0 0 7px;
+    color: #A88B4A;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+
+.transfer-confirmation-modal h2 {
+    margin: 0 32px 10px 0;
+    color: #12382F;
+    font-size: 22px;
+    line-height: 1.3;
+    font-weight: 700;
+}
+
+.transfer-confirmation-description {
+    margin: 0;
+    color: #60736D;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.transfer-confirmation-details {
+    display: flex;
+    flex-direction: column;
+    margin-top: 21px;
+    padding: 4px 15px;
+    border: 1px solid #D9E1DC;
+    border-radius: 10px;
+    background: #F8FAF8;
+}
+
+.transfer-confirmation-details > div {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 13px 0;
+}
+
+.transfer-confirmation-details > div + div {
+    border-top: 1px solid #E7ECE9;
+}
+
+.transfer-confirmation-details span {
+    color: #60736D;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.transfer-confirmation-details strong {
+    max-width: 62%;
+    color: #12382F;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.5;
+    text-align: right;
+    overflow-wrap: anywhere;
+}
+
+.transfer-confirmation-details .transfer-confirmation-amount {
+    color: #0E3B30;
+    font-size: 16px;
+}
+
+.transfer-confirmation-notice {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 17px;
+    padding: 12px;
+    border: 1px solid #E8DAB8;
+    border-radius: 9px;
+    background: #FBF7ED;
+    color: #8A6B2F;
+}
+
+.transfer-confirmation-notice > svg {
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+
+.transfer-confirmation-notice p {
+    margin: 0;
+    color: #725D35;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.transfer-confirmation-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 24px;
+}
+
+.transfer-confirmation-cancel,
+.transfer-confirmation-confirm {
+    min-height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 0 15px;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.transfer-confirmation-cancel {
+    border: 1px solid #D9E1DC;
+    background: #FFFFFF;
+    color: #60736D;
+}
+
+.transfer-confirmation-cancel:hover {
+    background: #F5F7F5;
+    color: #12382F;
+}
+
+.transfer-confirmation-confirm {
+    border: 1px solid #0E3B30;
+    background: #0E3B30;
+    color: #FFFFFF;
+}
+
+.transfer-confirmation-confirm:hover {
+    border-color: #123F33;
+    background: #123F33;
+}
+
+.transfer-confirmation-cancel:disabled,
+.transfer-confirmation-confirm:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.transfer-confirmation-spinner {
+    animation: transfer-confirmation-spin 0.8s linear infinite;
+}
+
+@keyframes transfer-confirmation-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 500px) {
+    .transfer-confirmation-overlay {
+        padding: 16px;
+    }
+
+    .transfer-confirmation-modal {
+        padding: 25px 21px;
+        border-radius: 12px;
+    }
+
+    .transfer-confirmation-modal h2 {
+        font-size: 20px;
+    }
+
+    .transfer-confirmation-actions {
+        flex-direction: column-reverse;
+    }
+
+    .transfer-confirmation-cancel,
+    .transfer-confirmation-confirm {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .transfer-type-options {
+        width: 100%;
+    }
+
+    .transfer-type-option {
+        min-width: 0;
+        flex: 1;
+        padding: 0 10px;
+    }
+
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 850px) {
+
+    .transfer-content {
+        grid-template-columns: 1fr;
+    }
+
+    .transfer-summary-card {
+        position: static;
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    .transfer-page {
+        padding: 28px 16px 50px;
+    }
+
+    .transfer-header {
+        flex-direction: column;
+    }
+
+    .transfer-header h1 {
+        font-size: 28px;
+    }
+
+    .transfer-back-button {
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    .transfer-form-card,
+    .transfer-summary-card {
+        padding: 22px;
+    }
+
+    .transfer-error-card {
+        margin: 70px auto;
+        padding: 32px 22px;
+    }
+
+}

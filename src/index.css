@@ -1,0 +1,66 @@
+
+body {
+    margin: 0;
+    background: var(--bank-background);
+    color: var(--bank-text);
+}
+
+a {
+    color: inherit;
+}
+
+:root {
+    /* =========================
+       VISHNU BANK
+       Deep Emerald + Champagne
+       ========================= */
+
+    /* Brand */
+    --bank-emerald: #0E3B30;
+    --bank-emerald-dark: #092C24;
+    --bank-emerald-light: #164D40;
+
+    /* Champagne */
+    --bank-champagne: #A88B4A;
+    --bank-champagne-light: #E3CFA0;
+    --bank-champagne-soft: #F4EBD8;
+
+    /* Backgrounds */
+    --bank-background: #F4F6F2;
+    --bank-surface: #FFFFFF;
+    --bank-surface-soft: #F8FAF8;
+
+    /* Text */
+    --bank-text: #12382F;
+    --bank-text-secondary: #60736D;
+    --bank-text-muted: #7A8A84;
+
+    /* Borders */
+    --bank-border: #D9E1DC;
+    --bank-border-light: #E8EDE9;
+
+    /* Financial states */
+    --bank-success: #287A5A;
+    --bank-success-bg: #EAF5EF;
+
+    --bank-error: #B54747;
+    --bank-error-bg: #FCEEEE;
+
+    --bank-warning: #A87524;
+    --bank-warning-bg: #FBF3E3;
+
+    /* Shadows */
+    --bank-shadow-sm:
+        0 2px 8px rgba(14, 59, 48, 0.05);
+
+    --bank-shadow:
+        0 5px 18px rgba(14, 59, 48, 0.07);
+
+    --bank-shadow-lg:
+        0 12px 32px rgba(14, 59, 48, 0.10);
+
+    /* Radius */
+    --bank-radius-sm: 8px;
+    --bank-radius: 12px;
+    --bank-radius-lg: 16px;
+}

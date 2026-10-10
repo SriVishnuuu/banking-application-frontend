@@ -1,0 +1,975 @@
+.beneficiaries-page {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 40px 32px 60px;
+}
+
+
+/* =========================
+   Page Header
+========================= */
+
+.beneficiaries-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 32px;
+}
+
+.page-eyebrow {
+    margin: 0 0 7px;
+    color: #A88B4A;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+
+.beneficiaries-header h1 {
+    margin: 0;
+    color: #12382F;
+    font-size: 32px;
+    line-height: 1.2;
+    font-weight: 750;
+}
+
+.beneficiaries-header p:last-child {
+    margin: 9px 0 0;
+    color: #60736D;
+    font-size: 15px;
+}
+
+
+/* =========================
+   Buttons
+========================= */
+
+.add-beneficiary-button,
+.primary-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 42px;
+    padding: 0 18px;
+    border: none;
+    border-radius: 9px;
+    background: #0E3B30;
+    color: #FFFFFF;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 650;
+    cursor: pointer;
+    transition:
+        background-color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+.add-beneficiary-button:hover,
+.primary-button:hover {
+    background: #164C3F;
+    box-shadow: 0 6px 15px rgba(14, 59, 48, 0.2);
+}
+
+.add-beneficiary-button:active,
+.primary-button:active {
+    transform: translateY(1px);
+}
+
+.add-beneficiary-button span {
+    font-size: 19px;
+    line-height: 1;
+}
+
+.secondary-button {
+    min-height: 42px;
+    padding: 0 18px;
+    border: 1px solid #D9E1DC;
+    border-radius: 9px;
+    background: #FFFFFF;
+    color: #60736D;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 650;
+    cursor: pointer;
+}
+
+.secondary-button:hover {
+    background: #F4F6F2;
+}
+
+
+/* =========================
+   Messages
+========================= */
+
+.beneficiary-error,
+.beneficiary-success {
+    margin-bottom: 20px;
+    padding: 13px 16px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 550;
+}
+
+.beneficiary-error {
+    border: 1px solid #E9BABA;
+    background: #FCEEEE;
+    color: #B54747;
+}
+
+.beneficiary-success {
+    border: 1px solid #B8D9C8;
+    background: #E8F3ED;
+    color: #287A5A;
+}
+
+
+/* =========================
+   Create Form
+========================= */
+
+.beneficiary-form-card {
+    margin-bottom: 38px;
+    padding: 26px;
+    border: 1px solid #D9E1DC;
+    border-radius: 16px;
+    background: #FFFFFF;
+    box-shadow: 0 7px 24px rgba(18, 56, 47, 0.06);
+}
+
+.form-card-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.form-card-header h2 {
+    margin: 0;
+    color: #12382F;
+    font-size: 21px;
+}
+
+.close-form-button {
+    width: 34px;
+    height: 34px;
+    border: none;
+    border-radius: 8px;
+    background: #EDF1EF;
+    color: #60736D;
+    font-size: 22px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.close-form-button:hover {
+    background: #E1E9E5;
+    color: #12382F;
+}
+
+.beneficiary-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.form-field label {
+    color: #12382F;
+    font-size: 13px;
+    font-weight: 650;
+}
+
+.form-field input {
+    width: 100%;
+    height: 44px;
+    padding: 0 13px;
+    box-sizing: border-box;
+    border: 1px solid #D9E1DC;
+    border-radius: 9px;
+    outline: none;
+    background: #FFFFFF;
+    color: #12382F;
+    font-family: inherit;
+    font-size: 14px;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.form-field input::placeholder {
+    color: #8FA49C;
+}
+
+.form-field input:focus {
+    border-color: #A88B4A;
+    box-shadow: 0 0 0 3px rgba(168, 139, 74, 0.12);
+}
+
+.beneficiary-form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+
+/* =========================
+   Field Validation Errors
+========================= */
+
+.form-field input.field-invalid {
+    border-color: #B54747;
+    background: #FFF8F8;
+}
+
+.form-field input.field-invalid:focus {
+    border-color: #B54747;
+    box-shadow: 0 0 0 3px rgba(181, 71, 71, 0.1);
+}
+
+.field-error {
+    margin: -1px 0 0;
+    color: #B54747;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.form-field input:disabled {
+    background: #F4F6F2;
+    color: #8FA49C;
+    cursor: not-allowed;
+}
+
+
+/* =========================
+   Section Header
+========================= */
+
+.beneficiaries-section {
+    margin-top: 10px;
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+}
+
+.section-title h2 {
+    margin: 0;
+    color: #12382F;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.beneficiary-count {
+    min-width: 30px;
+    height: 30px;
+    padding: 0 9px;
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    background: #F4EFE3;
+    color: #A88B4A;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* =========================
+   Beneficiary Cards
+========================= */
+
+.beneficiary-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.beneficiary-card {
+    padding: 23px;
+    border: 1px solid #D9E1DC;
+    border-radius: 16px;
+    background: #FFFFFF;
+    box-shadow: 0 5px 18px rgba(18, 56, 47, 0.05);
+    transition:
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+.beneficiary-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 26px rgba(14, 59, 48, 0.08);
+}
+
+.beneficiary-card-header {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.beneficiary-avatar {
+    width: 46px;
+    height: 46px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #F4EFE3;
+    color: #A88B4A;
+    font-size: 14px;
+    font-weight: 750;
+}
+
+.beneficiary-name-block {
+    min-width: 0;
+    flex: 1;
+}
+
+.beneficiary-name-block h3 {
+    margin: 0;
+    overflow: hidden;
+    color: #12382F;
+    font-size: 15px;
+    font-weight: 700;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.beneficiary-name-block p {
+    margin: 4px 0 0;
+    color: #60736D;
+    font-size: 12px;
+}
+
+.beneficiary-status {
+    flex-shrink: 0;
+    padding: 5px 9px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.beneficiary-status.active {
+    background: #E8F3ED;
+    color: #287A5A;
+}
+
+.beneficiary-status.blocked {
+    background: #F8F1E3;
+    color: #8A6B2F;
+}
+
+.beneficiary-status.removed {
+    background: #FCEEEE;
+    color: #B54747;
+}
+
+
+/* =========================
+   Beneficiary Details
+========================= */
+
+.beneficiary-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 25px;
+    padding-top: 18px;
+    border-top: 1px solid #E7ECE9;
+}
+
+.beneficiary-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.beneficiary-detail span {
+    color: #8FA49C;
+    font-size: 11px;
+}
+
+.beneficiary-detail strong {
+    color: #12382F;
+    font-size: 13px;
+    font-weight: 650;
+    word-break: break-word;
+}
+
+
+/* =========================
+   Card Actions
+========================= */
+
+.beneficiary-card-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.remove-beneficiary-button {
+    padding: 8px 13px;
+    border: 1px solid #E9BABA;
+    border-radius: 8px;
+    background: #FFFFFF;
+    color: #B54747;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 650;
+    cursor: pointer;
+}
+
+.remove-beneficiary-button:hover {
+    background: #FCEEEE;
+}
+
+.remove-beneficiary-button:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+
+/* =========================
+   Empty State
+========================= */
+
+.beneficiaries-empty {
+    padding: 60px 25px;
+    border: 1px dashed #C8D4CE;
+    border-radius: 16px;
+    background: #F8FAF8;
+    text-align: center;
+}
+
+.empty-icon {
+    width: 54px;
+    height: 54px;
+    margin: 0 auto 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #F4EFE3;
+    color: #A88B4A;
+    font-size: 28px;
+}
+
+.beneficiaries-empty h3 {
+    margin: 0;
+    color: #12382F;
+    font-size: 17px;
+}
+
+.beneficiaries-empty p {
+    max-width: 420px;
+    margin: 8px auto 22px;
+    color: #60736D;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   Loading
+========================= */
+
+.beneficiaries-loading {
+    padding: 80px 20px;
+    color: #60736D;
+    text-align: center;
+    font-size: 14px;
+}
+
+
+/* =========================
+   Focus
+========================= */
+
+.add-beneficiary-button:focus-visible,
+.primary-button:focus-visible,
+.secondary-button:focus-visible,
+.close-form-button:focus-visible,
+.remove-beneficiary-button:focus-visible,
+.form-field input:focus-visible {
+    outline: 3px solid rgba(168, 139, 74, 0.2);
+    outline-offset: 2px;
+}
+
+
+/* =========================
+   PAGE ERROR STATE
+========================= */
+
+.beneficiaries-error {
+    max-width: 570px;
+
+    margin: 120px auto 0;
+    padding: 36px 32px;
+
+    text-align: center;
+
+    background: #FFFFFF;
+
+    border: 1px solid #D9E1DC;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 4px 16px rgba(18, 56, 47, 0.04);
+}
+
+.beneficiaries-error h3 {
+    margin: 0 0 10px;
+
+    color: #12382F;
+
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.beneficiaries-error p {
+    margin: 0 0 22px;
+
+    color: #60736D;
+
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.beneficiaries-error .primary-button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 95px;
+
+    padding: 11px 18px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #0E3B30;
+
+    color: #FFFFFF;
+
+    font-family: inherit;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.beneficiaries-error .primary-button:hover {
+    background: #164C3F;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 5px 12px rgba(14, 59, 48, 0.18);
+}
+
+.beneficiaries-error .primary-button:active {
+    transform: translateY(0);
+}
+
+.beneficiaries-error .primary-button:focus-visible {
+    outline: 3px solid rgba(168, 139, 74, 0.22);
+
+    outline-offset: 2px;
+}
+
+
+/* =========================
+   LOADING STATE
+========================= */
+
+.beneficiaries-loading {
+    max-width: 570px;
+
+    margin: 120px auto 0;
+    padding: 36px 32px;
+
+    text-align: center;
+
+    color: #60736D;
+
+    font-size: 14px;
+}
+
+
+.beneficiary-confirmation-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: rgba(10, 35, 29, 0.52);
+    backdrop-filter: blur(4px);
+    box-sizing: border-box;
+}
+
+.beneficiary-confirmation-modal {
+    position: relative;
+    width: 100%;
+    max-width: 470px;
+    max-height: calc(100vh - 48px);
+    overflow-y: auto;
+    padding: 30px;
+    background: #FFFFFF;
+    border: 1px solid #D9E1DC;
+    border-radius: 15px;
+    box-shadow: 0 22px 60px rgba(14, 59, 48, 0.2);
+    box-sizing: border-box;
+    animation: beneficiary-confirmation-enter 0.18s ease-out;
+}
+
+@keyframes beneficiary-confirmation-enter {
+    from {
+        opacity: 0;
+        transform: translateY(8px) scale(0.985);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.beneficiary-confirmation-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: 1px solid #D9E1DC;
+    border-radius: 9px;
+    background: #F7F9F7;
+    color: #60736D;
+    cursor: pointer;
+}
+
+.beneficiary-confirmation-close:hover {
+    background: #EEF3F0;
+    color: #12382F;
+}
+
+.beneficiary-confirmation-close:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+.beneficiary-confirmation-icon {
+    width: 49px;
+    height: 49px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 19px;
+    border: 1px solid #D9E1DC;
+    border-radius: 12px;
+    background: #E7EEEA;
+    color: #0E3B30;
+}
+
+.beneficiary-confirmation-icon-warning {
+    border-color: #E8DAB8;
+    background: #FBF5E7;
+    color: #9A7027;
+}
+
+.beneficiary-confirmation-eyebrow {
+    margin: 0 0 7px;
+    color: #A88B4A;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+
+.beneficiary-confirmation-modal h2 {
+    margin: 0 32px 10px 0;
+    color: #12382F;
+    font-size: 22px;
+    line-height: 1.3;
+    font-weight: 700;
+}
+
+.beneficiary-confirmation-description {
+    margin: 0;
+    color: #60736D;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.beneficiary-confirmation-details {
+    display: flex;
+    flex-direction: column;
+    margin-top: 21px;
+    padding: 4px 15px;
+    border: 1px solid #D9E1DC;
+    border-radius: 10px;
+    background: #F8FAF8;
+}
+
+.beneficiary-confirmation-details > div {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 13px 0;
+}
+
+.beneficiary-confirmation-details > div + div {
+    border-top: 1px solid #E7ECE9;
+}
+
+.beneficiary-confirmation-details span {
+    color: #60736D;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.beneficiary-confirmation-details strong {
+    max-width: 62%;
+    color: #12382F;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.5;
+    text-align: right;
+    overflow-wrap: anywhere;
+}
+
+.beneficiary-confirmation-notice {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 17px;
+    padding: 12px;
+    border: 1px solid #E8DAB8;
+    border-radius: 9px;
+    background: #FBF7ED;
+    color: #8A6B2F;
+}
+
+.beneficiary-confirmation-notice > svg {
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+
+.beneficiary-confirmation-notice p {
+    margin: 0;
+    color: #725D35;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.beneficiary-confirmation-notice-warning {
+    border-color: #F0D8D5;
+    background: #FFF6F5;
+    color: #B54747;
+}
+
+.beneficiary-confirmation-notice-warning p {
+    color: #8E3B3B;
+}
+
+.beneficiary-confirmation-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 24px;
+}
+
+.beneficiary-confirmation-cancel,
+.beneficiary-confirmation-confirm {
+    min-height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 0 15px;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.beneficiary-confirmation-cancel {
+    border: 1px solid #D9E1DC;
+    background: #FFFFFF;
+    color: #60736D;
+}
+
+.beneficiary-confirmation-cancel:hover {
+    background: #F5F7F5;
+    color: #12382F;
+}
+
+.beneficiary-confirmation-confirm {
+    border: 1px solid #0E3B30;
+    background: #0E3B30;
+    color: #FFFFFF;
+}
+
+.beneficiary-confirmation-confirm:hover {
+    border-color: #123F33;
+    background: #123F33;
+}
+
+.beneficiary-confirmation-remove {
+    border-color: #B54747;
+    background: #B54747;
+}
+
+.beneficiary-confirmation-remove:hover {
+    border-color: #963A3A;
+    background: #963A3A;
+}
+
+.beneficiary-confirmation-cancel:disabled,
+.beneficiary-confirmation-confirm:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.beneficiary-confirmation-spinner {
+    animation: beneficiary-confirmation-spin 0.8s linear infinite;
+}
+
+@keyframes beneficiary-confirmation-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 700px) {
+
+    .beneficiaries-error {
+        margin: 70px 16px 0;
+
+        padding: 30px 22px;
+    }
+
+    .beneficiaries-error h3 {
+        font-size: 17px;
+    }
+
+}
+
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 850px) {
+
+    .beneficiaries-page {
+        padding: 30px 20px 50px;
+    }
+
+    .beneficiaries-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .beneficiary-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .beneficiary-form-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 550px) {
+
+    .beneficiaries-page {
+        padding: 25px 16px 40px;
+    }
+
+    .beneficiaries-header h1 {
+        font-size: 27px;
+    }
+
+    .add-beneficiary-button {
+        width: 100%;
+    }
+
+    .beneficiary-form-card {
+        padding: 20px;
+    }
+
+    .beneficiary-details {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .beneficiary-card {
+        padding: 19px;
+    }
+
+    .beneficiary-card-header {
+        align-items: flex-start;
+    }
+
+    .beneficiary-status {
+        font-size: 9px;
+    }
+
+    .beneficiary-confirmation-overlay {
+        padding: 16px;
+    }
+
+    .beneficiary-confirmation-modal {
+        padding: 25px 21px;
+        border-radius: 12px;
+    }
+
+    .beneficiary-confirmation-modal h2 {
+        font-size: 20px;
+    }
+
+    .beneficiary-confirmation-actions {
+        flex-direction: column-reverse;
+    }
+
+    .beneficiary-confirmation-cancel,
+    .beneficiary-confirmation-confirm {
+        width: 100%;
+    }
+}

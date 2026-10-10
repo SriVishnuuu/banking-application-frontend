@@ -1,0 +1,371 @@
+.admin-create-branch {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* =========================
+   BACK
+========================= */
+
+.admin-create-branch-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    margin-bottom: 20px;
+    color: #60736D;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.admin-create-branch-back:hover {
+    color: #0E3B30;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.admin-create-branch-header {
+    margin-bottom: 24px;
+    padding: 24px;
+    border: 1px solid #D9E1DC;
+    border-radius: 12px;
+    background: #FFFFFF;
+    box-shadow: 0 4px 14px rgba(14, 59, 48, 0.035);
+    box-sizing: border-box;
+}
+
+.admin-create-branch-title-section {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.admin-create-branch-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    background: #E7EEEA;
+    color: #0E3B30;
+}
+
+.admin-create-branch-eyebrow {
+    margin: 0 0 5px;
+    color: #A88B4A;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.admin-create-branch-header h1 {
+    margin: 0;
+    color: #12382F;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.admin-create-branch-header p:last-child {
+    margin: 6px 0 0;
+    color: #71827C;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* =========================
+   ALERTS
+========================= */
+
+.admin-create-branch-alert,
+.admin-create-branch-success {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 20px;
+    padding: 13px 16px;
+    border-radius: 9px;
+    font-size: 13px;
+    box-sizing: border-box;
+}
+
+.admin-create-branch-alert {
+    border: 1px solid #E8C7C7;
+    background: #FDF3F3;
+    color: #B54747;
+}
+
+.admin-create-branch-success {
+    border: 1px solid #C9E4D5;
+    background: #F0F8F3;
+    color: #287A5A;
+}
+
+/* =========================
+   FORM CARD
+========================= */
+
+.admin-create-branch-form-card {
+    padding: 24px;
+    border: 1px solid #D9E1DC;
+    border-radius: 12px;
+    background: #FFFFFF;
+    box-shadow: 0 4px 14px rgba(14, 59, 48, 0.035);
+    box-sizing: border-box;
+}
+
+.admin-create-branch-card-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 11px;
+    padding-bottom: 18px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #E7ECE9;
+    color: #0E3B30;
+}
+
+.admin-create-branch-card-header h2 {
+    margin: 0;
+    color: #12382F;
+    font-size: 17px;
+    font-weight: 650;
+}
+
+.admin-create-branch-card-header p {
+    margin: 5px 0 0;
+    color: #71827C;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+/* =========================
+   FORM
+========================= */
+
+.admin-create-branch-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px 20px;
+}
+
+.admin-create-branch-field {
+    min-width: 0;
+}
+
+.admin-create-branch-field-full {
+    grid-column: 1 / -1;
+}
+
+.admin-create-branch-field label {
+    display: block;
+    margin-bottom: 7px;
+    color: #456057;
+    font-size: 12px;
+    font-weight: 650;
+}
+
+.admin-create-branch-field input,
+.admin-create-branch-field textarea {
+    width: 100%;
+    border: 1px solid #CBD8D1;
+    border-radius: 8px;
+    background: #FFFFFF;
+    color: #12382F;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+    box-sizing: border-box;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.admin-create-branch-field input {
+    height: 43px;
+    padding: 0 13px;
+}
+
+.admin-create-branch-field textarea {
+    min-height: 105px;
+    padding: 12px 13px;
+    resize: vertical;
+    line-height: 1.5;
+}
+
+.admin-create-branch-field input::placeholder,
+.admin-create-branch-field textarea::placeholder {
+    color: #94A19C;
+}
+
+.admin-create-branch-field input:focus,
+.admin-create-branch-field textarea:focus {
+    border-color: #A88B4A;
+    box-shadow: 0 0 0 3px rgba(168, 139, 74, 0.12);
+}
+
+.admin-create-branch-field input:disabled,
+.admin-create-branch-field textarea:disabled {
+    background: #F4F6F2;
+    cursor: not-allowed;
+    opacity: 0.75;
+}
+
+.admin-create-branch-field-error {
+    display: block;
+    margin-top: 6px;
+    color: #B54747;
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.admin-create-branch-form-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    margin-top: 28px;
+    padding-top: 20px;
+    border-top: 1px solid #E7ECE9;
+}
+
+.admin-create-branch-form-footer > p {
+    max-width: 520px;
+    margin: 0;
+    color: #71827C;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.admin-create-branch-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.admin-create-branch-cancel-button,
+.admin-create-branch-submit-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: 41px;
+    padding: 0 16px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.admin-create-branch-cancel-button {
+    border: 1px solid #CBD8D1;
+    background: #FFFFFF;
+    color: #456057;
+}
+
+.admin-create-branch-cancel-button:hover {
+    border-color: #A88B4A;
+    color: #0E3B30;
+}
+
+.admin-create-branch-submit-button {
+    border: 1px solid #0E3B30;
+    background: #0E3B30;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.admin-create-branch-submit-button:hover:not(:disabled) {
+    background: #123F33;
+    border-color: #123F33;
+}
+
+.admin-create-branch-submit-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.admin-create-branch-field input.admin-create-branch-input-error,
+.admin-create-branch-field textarea.admin-create-branch-input-error {
+    border-color: #B54747;
+    box-shadow: 0 0 0 3px rgba(181, 71, 71, 0.08);
+}
+
+.admin-create-branch-field input.admin-create-branch-input-error:focus,
+.admin-create-branch-field textarea.admin-create-branch-input-error:focus {
+    border-color: #B54747;
+    box-shadow: 0 0 0 3px rgba(181, 71, 71, 0.1);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 700px) {
+    .admin-create-branch-header {
+        padding: 20px;
+    }
+
+    .admin-create-branch-form-card {
+        padding: 20px;
+    }
+
+    .admin-create-branch-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-create-branch-field-full {
+        grid-column: auto;
+    }
+
+    .admin-create-branch-form-footer {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .admin-create-branch-form-footer > p {
+        max-width: none;
+    }
+
+    .admin-create-branch-actions {
+        justify-content: flex-end;
+    }
+}
+
+@media (max-width: 500px) {
+    .admin-create-branch-title-section {
+        align-items: flex-start;
+    }
+
+    .admin-create-branch-icon {
+        width: 44px;
+        height: 44px;
+    }
+
+    .admin-create-branch-header h1 {
+        font-size: 22px;
+    }
+
+    .admin-create-branch-form-card {
+        padding: 18px;
+    }
+
+    .admin-create-branch-actions {
+        flex-direction: column-reverse;
+    }
+
+    .admin-create-branch-cancel-button,
+    .admin-create-branch-submit-button {
+        width: 100%;
+    }
+}

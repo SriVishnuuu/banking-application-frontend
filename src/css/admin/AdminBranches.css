@@ -1,0 +1,595 @@
+.admin-branches {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+/* =========================
+   SEARCH
+========================= */
+
+.admin-branches-search-panel {
+    margin-bottom: 24px;
+    padding: 20px;
+    border: 1px solid #CBD8D1;
+    border-radius: 12px;
+    background:
+        linear-gradient(
+            135deg,
+            #E7EEEA 0%,
+            #EEF3F0 55%,
+            #E4ECE7 100%
+        );
+    box-shadow: 0 5px 16px rgba(14, 59, 48, 0.05);
+    box-sizing: border-box;
+}
+
+.admin-branches-search-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.admin-branches-search-input-wrapper {
+    position: relative;
+    flex: 1;
+    min-width: 0;
+}
+
+.admin-branches-search-input-wrapper input {
+    width: 100%;
+    height: 44px;
+    padding: 0 42px 0 44px;
+    border: 1px solid #CBD8D1;
+    border-radius: 8px;
+    background: #FFFFFF;
+    color: #12382F;
+    font-size: 14px;
+    outline: none;
+    box-sizing: border-box;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.admin-branches-search-input-wrapper input::placeholder {
+    color: #80908A;
+}
+
+.admin-branches-search-input-wrapper input:focus {
+    border-color: #A88B4A;
+    box-shadow: 0 0 0 3px rgba(168, 139, 74, 0.12);
+}
+
+.admin-branches-search-icon {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: #71827C;
+    pointer-events: none;
+}
+
+.admin-branches-search-clear {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    border: none;
+    border-radius: 6px;
+    background: transparent;
+    color: #71827C;
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+
+.admin-branches-search-clear:hover {
+    background: #EEF3F0;
+    color: #12382F;
+}
+
+.admin-branches-search-button,
+.admin-branches-clear-button {
+    height: 44px;
+    padding: 0 18px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.admin-branches-search-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: 1px solid #0E3B30;
+    background: #0E3B30;
+    color: #FFFFFF;
+}
+
+.admin-branches-search-button:hover {
+    background: #123F33;
+    border-color: #123F33;
+}
+
+.admin-branches-clear-button {
+    border: 1px solid #CBD8D1;
+    background: #FFFFFF;
+    color: #456057;
+}
+
+.admin-branches-clear-button:hover {
+    border-color: #A88B4A;
+    color: #0E3B30;
+}
+
+.admin-branches-search-result {
+    margin: 12px 0 0;
+    color: #60736D;
+    font-size: 13px;
+}
+
+.admin-branches-search-result strong {
+    color: #12382F;
+    font-weight: 600;
+}
+
+/* =========================
+   PAGE HEADER
+========================= */
+
+.admin-branches-header {
+    margin-bottom: 24px;
+}
+
+.admin-branches-eyebrow {
+    margin: 0 0 6px;
+    color: #A88B4A;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.admin-branches-header h1 {
+    margin: 0;
+    color: #12382F;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.admin-branches-header p:last-child {
+    margin: 8px 0 0;
+    color: #60736D;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* =========================
+   TABLE CARD
+========================= */
+
+.admin-branches-table-card {
+    overflow: hidden;
+    border: 1px solid #D9E1DC;
+    border-radius: 12px;
+    background: #FFFFFF;
+    box-shadow: 0 4px 14px rgba(14, 59, 48, 0.035);
+}
+
+.admin-branches-table-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 22px;
+    border-bottom: 1px solid #E7ECE9;
+}
+
+.admin-branches-table-header h2 {
+    margin: 0;
+    color: #12382F;
+    font-size: 17px;
+    font-weight: 650;
+}
+
+.admin-branches-table-header span {
+    display: block;
+    margin-top: 4px;
+    color: #71827C;
+    font-size: 12px;
+}
+
+/* =========================
+   TABLE
+========================= */
+
+.admin-branches-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.admin-branches-table {
+    width: 100%;
+    min-width: 850px;
+    border-collapse: collapse;
+}
+
+.admin-branches-table th {
+    padding: 13px 20px;
+    border-bottom: 1px solid #D9E1DC;
+    background: #F7F9F7;
+    color: #60736D;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-align: left;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.admin-branches-table td {
+    padding: 17px 20px;
+    border-bottom: 1px solid #E8EEEA;
+    color: #405850;
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+.admin-branches-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.admin-branches-table tbody tr {
+    transition: background-color 0.15s ease;
+}
+
+.admin-branches-table tbody tr:hover {
+    background: #FAFCFB;
+}
+
+.admin-branches-code {
+    color: #0E3B30;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+}
+
+.admin-branches-name {
+    color: #12382F;
+    font-weight: 600;
+}
+
+.admin-branches-ifsc {
+    color: #60736D;
+    font-family: monospace;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+}
+
+/* =========================
+   STATUS
+========================= */
+
+.admin-branches-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 5px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 650;
+    white-space: nowrap;
+}
+
+.admin-branches-status-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+}
+
+.admin-branches-status.active {
+    background: #E7F3ED;
+    color: #287A5A;
+}
+
+.admin-branches-status.active .admin-branches-status-dot {
+    background: #287A5A;
+}
+
+.admin-branches-status.inactive {
+    background: #F1F3F2;
+    color: #697873;
+}
+
+.admin-branches-status.inactive .admin-branches-status-dot {
+    background: #697873;
+}
+
+/* =========================
+   VIEW BUTTON
+========================= */
+
+.admin-branches-view-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding: 8px 12px;
+    border: 1px solid #D3DED8;
+    border-radius: 7px;
+    background: #FFFFFF;
+    color: #0E3B30;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.admin-branches-view-button:hover {
+    border-color: #A88B4A;
+    background: #FBF9F3;
+    color: #806A37;
+}
+
+/* =========================
+   STATES
+========================= */
+
+.admin-branches-state {
+    display: flex;
+    min-height: 280px;
+    padding: 40px 24px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.admin-branches-state-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    margin-bottom: 14px;
+    border-radius: 50%;
+    background: #EEF3F0;
+    color: #0E3B30;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.admin-branches-state h3 {
+    margin: 0;
+    color: #12382F;
+    font-size: 16px;
+    font-weight: 650;
+}
+
+.admin-branches-state p {
+    max-width: 440px;
+    margin: 7px 0 0;
+    color: #71827C;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.admin-branches-error-state .admin-branches-state-icon {
+    background: #F9EAEA;
+    color: #B54747;
+}
+
+.admin-branches-retry-button {
+    margin-top: 18px;
+    padding: 9px 16px;
+    border: 1px solid #0E3B30;
+    border-radius: 7px;
+    background: #0E3B30;
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.admin-branches-retry-button:hover {
+    background: #123F33;
+}
+
+.admin-branches-spinner {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 14px;
+    border: 3px solid #D9E1DC;
+    border-top-color: #0E3B30;
+    border-radius: 50%;
+    animation: adminBranchesSpin 0.8s linear infinite;
+}
+
+@keyframes adminBranchesSpin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* =========================
+   PAGINATION
+========================= */
+
+.admin-branches-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    border-top: 1px solid #E7ECE9;
+}
+
+.admin-branches-pagination button {
+    min-width: 90px;
+    height: 36px;
+    padding: 0 13px;
+    border: 1px solid #CBD8D1;
+    border-radius: 7px;
+    background: #FFFFFF;
+    color: #456057;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.admin-branches-pagination button:hover:not(:disabled) {
+    border-color: #A88B4A;
+    color: #0E3B30;
+}
+
+.admin-branches-pagination button:disabled {
+    cursor: not-allowed;
+    opacity: 0.45;
+}
+
+.admin-branches-pagination span {
+    color: #71827C;
+    font-size: 13px;
+}
+
+.admin-branches-pagination strong {
+    color: #12382F;
+    font-weight: 650;
+}
+
+.admin-branches-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.admin-branches-create-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex-shrink: 0;
+    height: 42px;
+    padding: 0 16px;
+    border: 1px solid #0E3B30;
+    border-radius: 8px;
+    background: #0E3B30;
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.admin-branches-create-button:hover {
+    background: #123F33;
+    border-color: #123F33;
+    transform: translateY(-1px);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+    .admin-branches-search-form {
+        flex-wrap: wrap;
+    }
+
+    .admin-branches-search-input-wrapper {
+        flex: 1 1 100%;
+    }
+
+    .admin-branches-search-button,
+    .admin-branches-clear-button {
+        flex: 0 0 auto;
+    }
+
+    .admin-branches-table-header {
+        padding: 18px;
+    }
+}
+
+@media (max-width: 600px) {
+    .admin-branches-search-panel {
+        padding: 16px;
+    }
+
+    .admin-branches-search-form {
+        gap: 8px;
+    }
+
+    .admin-branches-search-button {
+        flex: 1;
+    }
+
+    .admin-branches-clear-button {
+        flex: 0 0 auto;
+    }
+
+    .admin-branches-header h1 {
+        font-size: 24px;
+    }
+
+    .admin-branches-header p:last-child {
+        font-size: 13px;
+    }
+
+    .admin-branches-table-header {
+        padding: 16px;
+    }
+
+    .admin-branches-pagination {
+        gap: 12px;
+        padding: 14px 16px;
+    }
+
+    .admin-branches-pagination button {
+        min-width: 78px;
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 700px) {
+    .admin-branches-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .admin-branches-create-button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 430px) {
+    .admin-branches-search-button {
+        padding: 0 13px;
+    }
+
+    .admin-branches-clear-button {
+        padding: 0 13px;
+    }
+
+    .admin-branches-pagination span {
+        font-size: 12px;
+    }
+}

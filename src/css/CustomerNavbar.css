@@ -1,0 +1,753 @@
+/* =========================================================
+   VISHNU BANK — DEEP EMERALD & CHAMPAGNE
+   Visual styling only — structure and responsive behavior unchanged.
+   ========================================================= */
+
+.customer-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    width: 100%;
+
+    background: #FFFFFF;
+
+    border-bottom: 1px solid #D9E1DC;
+
+    box-shadow:
+        0 2px 12px rgba(14, 59, 48, 0.04);
+}
+
+
+.customer-navbar-container {
+    max-width: 1440px;
+    height: 76px;
+
+    margin: 0 auto;
+    padding: 0 32px;
+
+    display: flex;
+    align-items: center;
+}
+
+
+/* =========================================================
+   BRAND
+   ========================================================= */
+
+.customer-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    text-decoration: none;
+
+    flex-shrink: 0;
+}
+
+
+.customer-brand-mark {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: #0E3B30;
+
+    color: #E3CFA0;
+
+    font-size: 20px;
+    font-weight: 800;
+
+    box-shadow:
+        0 6px 14px rgba(14, 59, 48, 0.22);
+}
+
+
+.customer-brand-name {
+    font-size: 19px;
+    font-weight: 800;
+    letter-spacing: -0.3px;
+
+    color: #12382F;
+}
+
+
+.customer-brand-name span {
+    color: #A88B4A;
+}
+
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.customer-navigation {
+    display: flex;
+    align-items: center;
+
+    margin-left: 52px;
+
+    height: 100%;
+
+    gap: 4px;
+}
+
+
+.customer-nav-link {
+    position: relative;
+
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    padding: 0 17px;
+
+    color: #60736D;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition:
+        color 0.2s ease,
+        background-color 0.2s ease;
+}
+
+
+.customer-nav-link:hover {
+    color: #0E3B30;
+
+    background: #F4F6F2;
+}
+
+
+.customer-nav-link.active {
+    color: #0E3B30;
+}
+
+
+.customer-nav-link.active::after {
+    content: "";
+
+    position: absolute;
+
+    left: 14px;
+    right: 14px;
+    bottom: 0;
+
+    height: 3px;
+
+    background: #A88B4A;
+
+    border-radius: 3px 3px 0 0;
+}
+
+
+/* =========================================================
+   NAVIGATION ICONS
+   ========================================================= */
+
+.nav-icon {
+    width: 18px;
+    height: 18px;
+
+    flex-shrink: 0;
+
+    stroke-width: 2;
+}
+
+
+/* =========================================================
+   PROFILE
+   ========================================================= */
+
+.profile-container {
+    position: relative;
+
+    margin-left: auto;
+}
+
+
+.profile-trigger {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 7px 12px 7px 7px;
+
+    border: 1px solid transparent;
+
+    border-radius: 12px;
+
+    background: transparent;
+
+    color: #12382F;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+.profile-trigger:hover {
+    background: #F4F6F2;
+
+    border-color: #D9E1DC;
+}
+
+
+.profile-avatar {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #0E3B30;
+
+    color: #E3CFA0;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+.profile-label {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+.profile-chevron {
+    width: 15px;
+    height: 15px;
+
+    color: #7A8A84;
+
+    transition:
+        transform 0.2s ease;
+}
+
+
+.profile-chevron.open {
+    transform: rotate(180deg);
+}
+
+
+/* =========================================================
+   PROFILE DROPDOWN
+   ========================================================= */
+
+.profile-dropdown {
+    position: absolute;
+
+    top: calc(100% + 10px);
+    right: 0;
+
+    width: 210px;
+
+    padding: 8px;
+
+    background: #FFFFFF;
+
+    border: 1px solid #D9E1DC;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 14px 35px rgba(14, 59, 48, 0.12),
+        0 3px 8px rgba(14, 59, 48, 0.05);
+}
+
+
+.profile-dropdown-item {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 11px 12px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: transparent;
+
+    color: #12382F;
+
+    text-decoration: none;
+
+    font-family: inherit;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-sizing: border-box;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+
+.profile-dropdown-item:hover {
+    background: #F4F6F2;
+
+    color: #0E3B30;
+}
+
+
+.dropdown-icon {
+    width: 18px;
+    height: 18px;
+
+    flex-shrink: 0;
+}
+
+
+.dropdown-divider {
+    height: 1px;
+
+    margin: 6px 4px;
+
+    background: #D9E1DC;
+}
+
+
+.profile-dropdown-item.logout-item {
+    color: #B54747;
+}
+
+
+.profile-dropdown-item.logout-item:hover {
+    background: #FCEEEE;
+
+    color: #B54747;
+}
+
+
+/* =========================================================
+   MOBILE MENU BUTTON
+   ========================================================= */
+
+.mobile-menu-button {
+    display: none;
+
+    width: 40px;
+    height: 40px;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-left: 8px;
+
+    border: 1px solid #D9E1DC;
+
+    border-radius: 10px;
+
+    background: #FFFFFF;
+
+    color: #12382F;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+.mobile-menu-button:hover {
+    background: #F4F6F2;
+
+    border-color: #AEBEB7;
+
+    color: #0E3B30;
+}
+
+
+.mobile-menu-button svg {
+    width: 21px;
+    height: 21px;
+}
+
+
+/* =========================================================
+   MOBILE NAVIGATION
+   ========================================================= */
+
+.mobile-navigation {
+    display: none;
+}
+
+
+/* =========================================================
+   FOCUS ACCESSIBILITY
+   ========================================================= */
+
+.customer-nav-link:focus-visible,
+.profile-trigger:focus-visible,
+.profile-dropdown-item:focus-visible,
+.mobile-menu-button:focus-visible,
+.mobile-close-button:focus-visible,
+.mobile-logout-button:focus-visible {
+    outline: 3px solid rgba(168, 139, 74, 0.28);
+
+    outline-offset: 2px;
+}
+
+
+/* =========================================================
+   TABLET
+   701px - 1000px
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .customer-navbar-container {
+        padding: 0 20px;
+    }
+
+
+    .customer-navigation {
+        margin-left: auto;
+
+        margin-right: 18px;
+
+        gap: 2px;
+    }
+
+
+    .customer-nav-link {
+        width: 48px;
+
+        padding: 0;
+
+        gap: 0;
+    }
+
+
+    .customer-nav-link .nav-label {
+        display: none;
+    }
+
+
+    .customer-nav-link.active::after {
+        left: 9px;
+        right: 9px;
+    }
+
+
+    .nav-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   <= 700px
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .customer-navbar-container {
+        height: 68px;
+
+        padding: 0 16px;
+    }
+
+
+    /* Brand */
+
+    .customer-brand-name {
+        font-size: 16px;
+    }
+
+
+    .customer-brand-mark {
+        width: 36px;
+        height: 36px;
+
+        border-radius: 10px;
+
+        font-size: 17px;
+    }
+
+
+    /* Hide desktop navigation */
+
+    .customer-navigation {
+        display: none;
+    }
+
+
+    /* Profile */
+
+    .profile-label {
+        display: none;
+    }
+
+
+    .profile-chevron {
+        display: none;
+    }
+
+
+    .profile-trigger {
+        padding: 4px;
+    }
+
+
+    .profile-avatar {
+        width: 36px;
+        height: 36px;
+    }
+
+
+    /* Mobile menu button */
+
+    .mobile-menu-button {
+        display: flex;
+    }
+
+
+    /* Mobile navigation panel */
+
+    .mobile-navigation {
+        display: block;
+
+        position: absolute;
+
+        top: 68px;
+        left: 0;
+        right: 0;
+
+        background: #FFFFFF;
+
+        border-top: 1px solid #D9E1DC;
+
+        box-shadow:
+            0 14px 30px rgba(14, 59, 48, 0.10);
+
+        padding: 18px 16px 20px;
+    }
+
+
+    /* Mobile navigation header */
+
+    .mobile-navigation-header {
+        display: flex;
+
+        align-items: center;
+        justify-content: space-between;
+
+        padding: 4px 4px 16px;
+
+        border-bottom: 1px solid #D9E1DC;
+    }
+
+
+    .mobile-navigation-header p {
+        margin: 0;
+
+        color: #12382F;
+
+        font-size: 14px;
+
+        font-weight: 800;
+
+        letter-spacing: 0.5px;
+    }
+
+
+    .mobile-navigation-header span {
+        display: block;
+
+        margin-top: 3px;
+
+        color: #60736D;
+
+        font-size: 12px;
+    }
+
+
+    /* Close button */
+
+    .mobile-close-button {
+        width: 36px;
+        height: 36px;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        border: 1px solid #D9E1DC;
+
+        border-radius: 9px;
+
+        background: #FFFFFF;
+
+        color: #60736D;
+
+        cursor: pointer;
+    }
+
+
+    .mobile-close-button:hover {
+        background: #F4F6F2;
+
+        color: #0E3B30;
+    }
+
+
+    .mobile-close-button svg {
+        width: 18px;
+        height: 18px;
+    }
+
+
+    /* Mobile links */
+
+    .mobile-navigation-links {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 4px;
+
+        padding: 14px 0;
+    }
+
+
+    .mobile-navigation-links .customer-nav-link {
+        width: 100%;
+        height: auto;
+
+        min-height: 48px;
+
+        justify-content: flex-start;
+
+        gap: 13px;
+
+        padding: 0 13px;
+
+        border-radius: 9px;
+
+        color: #12382F;
+
+        font-size: 14px;
+    }
+
+
+    .mobile-navigation-links .customer-nav-link:hover {
+        background: #F4F6F2;
+
+        color: #0E3B30;
+    }
+
+
+    .mobile-navigation-links .customer-nav-link.active {
+        background: #F4EBD8;
+
+        color: #0E3B30;
+    }
+
+
+    .mobile-navigation-links .customer-nav-link.active::after {
+        display: none;
+    }
+
+
+    .mobile-nav-icon {
+        width: 19px;
+        height: 19px;
+
+        flex-shrink: 0;
+    }
+
+
+    /* Divider */
+
+    .mobile-menu-divider {
+        height: 1px;
+
+        margin: 2px 4px 14px;
+
+        background: #D9E1DC;
+    }
+
+
+    /* Logout */
+
+    .mobile-logout-button {
+        width: 100%;
+
+        min-height: 48px;
+
+        display: flex;
+
+        align-items: center;
+
+        gap: 13px;
+
+        padding: 0 13px;
+
+        border: none;
+
+        border-radius: 9px;
+
+        background: transparent;
+
+        color: #B54747;
+
+        font-family: inherit;
+
+        font-size: 14px;
+
+        font-weight: 600;
+
+        cursor: pointer;
+
+        text-align: left;
+    }
+
+
+    .mobile-logout-button:hover {
+        background: #FCEEEE;
+    }
+
+
+    .mobile-logout-button svg {
+        width: 19px;
+        height: 19px;
+    }
+
+}

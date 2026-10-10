@@ -1,0 +1,786 @@
+.admin-transactions-page {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   FILTER CARD
+   ========================= */
+
+.admin-transactions-filter-card {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 26px;
+    padding: 22px;
+    border: 1px solid #CBD8D1;
+    border-radius: 12px;
+    background:
+        linear-gradient(
+            135deg,
+            #E7EEEA 0%,
+            #EEF3F0 55%,
+            #E4ECE7 100%
+        );
+    box-shadow: 0 5px 16px rgba(14, 59, 48, 0.05);
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.admin-transactions-filter-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 18px;
+    margin-bottom: 20px;
+}
+
+.admin-transactions-filter-header h2 {
+    margin: 0 0 6px;
+    color: #12382F;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.admin-transactions-filter-header p {
+    margin: 0;
+    color: #60736D;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.admin-transactions-clear-top {
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    gap: 7px;
+    padding: 8px 12px;
+    border: 1px solid #C9D5CF;
+    border-radius: 7px;
+    background: #FFFFFF;
+    color: #526761;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.admin-transactions-clear-top:hover {
+    background: #F8FAF8;
+    border-color: #AFC0B8;
+    color: #12382F;
+}
+
+/* =========================
+   FILTER FORM
+   ========================= */
+
+.admin-transactions-filter-form {
+    display: grid;
+    grid-template-columns:
+        minmax(170px, 1.4fr)
+        repeat(4, minmax(115px, 1fr))
+        minmax(180px, 1.15fr);
+    gap: 14px;
+    width: 100%;
+    min-width: 0;
+    align-items: end;
+    box-sizing: border-box;
+}
+
+.admin-transactions-field {
+    min-width: 0;
+}
+
+.admin-transactions-field label {
+    display: block;
+    margin-bottom: 7px;
+    color: #526761;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+.admin-transactions-field input,
+.admin-transactions-field select {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: 42px;
+    padding: 0 12px;
+    border: 1px solid #C9D5CF;
+    border-radius: 7px;
+    outline: none;
+    background: #FFFFFF;
+    color: #12382F;
+    font-family: inherit;
+    font-size: 13px;
+    box-sizing: border-box;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.admin-transactions-field input:focus,
+.admin-transactions-field select:focus {
+    border-color: #A88B4A;
+    box-shadow: 0 0 0 3px rgba(168, 139, 74, 0.12);
+}
+
+.admin-transactions-field input::placeholder {
+    color: #91A09B;
+}
+
+.admin-transactions-input-wrapper {
+    position: relative;
+    width: 100%;
+    min-width: 0;
+}
+
+.admin-transactions-input-wrapper svg {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    width: 16px;
+    height: 16px;
+    color: #7B8D86;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.admin-transactions-input-wrapper input {
+    padding-left: 37px;
+}
+
+.admin-transactions-filter-actions {
+    display: flex;
+    min-width: 0;
+    align-items: center;
+    gap: 8px;
+}
+
+.admin-transactions-apply-button,
+.admin-transactions-clear-button {
+    height: 42px;
+    border-radius: 7px;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    white-space: nowrap;
+    box-sizing: border-box;
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.admin-transactions-apply-button {
+    display: inline-flex;
+    min-width: 0;
+    flex: 1 1 auto;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding: 0 12px;
+    border: 1px solid #0E3B30;
+    background: #0E3B30;
+    color: #FFFFFF;
+}
+
+.admin-transactions-apply-button:hover {
+    background: #124A3C;
+    border-color: #124A3C;
+}
+
+.admin-transactions-apply-button:active {
+    transform: translateY(1px);
+}
+
+.admin-transactions-clear-button {
+    flex: 0 0 auto;
+    padding: 0 13px;
+    border: 1px solid #C9D5CF;
+    background: #FFFFFF;
+    color: #526761;
+}
+
+.admin-transactions-clear-button:hover {
+    background: #F8FAF8;
+    border-color: #AFC0B8;
+}
+
+/* =========================
+   PAGE INTRO
+   ========================= */
+
+.admin-transactions-page-intro {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 20px;
+    min-width: 0;
+    margin-bottom: 22px;
+}
+
+.admin-transactions-eyebrow {
+    display: block;
+    margin-bottom: 7px;
+    color: #A88B4A;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+}
+
+.admin-transactions-page-intro h1 {
+    margin: 0 0 7px;
+    color: #12382F;
+    font-size: 28px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.admin-transactions-page-intro p {
+    margin: 0;
+    color: #60736D;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.admin-transactions-count {
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.admin-transactions-count span {
+    color: #12382F;
+    font-size: 24px;
+    line-height: 1;
+    font-weight: 700;
+}
+
+.admin-transactions-count small {
+    margin-top: 5px;
+    color: #71817B;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+/* =========================
+   ERROR
+   ========================= */
+
+.admin-transactions-error {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    width: 100%;
+    margin-bottom: 18px;
+    padding: 13px 15px;
+    border: 1px solid #E4C2C2;
+    border-radius: 8px;
+    background: #FEF6F6;
+    color: #8F3838;
+    font-size: 13px;
+    box-sizing: border-box;
+}
+
+.admin-transactions-error button {
+    flex-shrink: 0;
+    padding: 6px 12px;
+    border: 1px solid #D6A8A8;
+    border-radius: 6px;
+    background: #FFFFFF;
+    color: #8F3838;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.admin-transactions-error button:hover {
+    background: #FFF9F9;
+}
+
+/* =========================
+   TABLE CARD
+   ========================= */
+
+.admin-transactions-table-card {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    background: #FFFFFF;
+    border: 1px solid #D9E1DC;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(14, 59, 48, 0.035);
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.admin-transactions-table-wrapper {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    box-sizing: border-box;
+}
+
+.admin-transactions-table {
+    width: 100%;
+    min-width: 980px;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+/* =========================
+   COLUMN WIDTHS
+   ========================= */
+
+.transaction-reference-column {
+    width: 20%;
+}
+
+.transaction-account-column {
+    width: 18%;
+}
+
+.transaction-type-column {
+    width: 12%;
+}
+
+.transaction-amount-column {
+    width: 13%;
+}
+
+.transaction-status-column {
+    width: 12%;
+}
+
+.transaction-date-column {
+    width: 17%;
+}
+
+.transaction-action-column {
+    width: 8%;
+}
+
+/* =========================
+   TABLE HEADER
+   ========================= */
+
+.admin-transactions-table th {
+    padding: 15px 18px;
+    border-bottom: 1px solid #D9E1DC;
+    background: #FAFBFA;
+    color: #60736D;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-align: left;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.admin-transactions-table th:nth-child(4),
+.admin-transactions-table td:nth-child(4) {
+    text-align: right;
+}
+
+.admin-transactions-table th:nth-child(7),
+.admin-transactions-table td:nth-child(7) {
+    text-align: center;
+}
+
+/* =========================
+   TABLE BODY
+   ========================= */
+
+.admin-transactions-table td {
+    padding: 16px 18px;
+    border-bottom: 1px solid #E7ECE9;
+    color: #12382F;
+    font-size: 13px;
+    vertical-align: middle;
+}
+
+.admin-transactions-table tbody tr {
+    transition: background-color 0.15s ease;
+}
+
+.admin-transactions-table tbody tr:hover {
+    background: #F8FAF8;
+}
+
+.admin-transactions-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* =========================
+   REFERENCE
+   ========================= */
+
+.admin-transaction-reference {
+    display: inline-block;
+    max-width: 100%;
+    color: #12382F;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    overflow-wrap: anywhere;
+}
+
+/* =========================
+   ACCOUNT CELL
+   ========================= */
+
+.admin-transaction-account-cell {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    min-width: 0;
+}
+
+.admin-transaction-account-cell > div {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    min-width: 0;
+}
+
+.admin-transaction-account-label {
+    min-width: 25px;
+    color: #8A9893;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.admin-transaction-account-cell > div > span:last-child {
+    min-width: 0;
+    color: #36574E;
+    font-size: 12px;
+    font-weight: 600;
+    overflow-wrap: anywhere;
+}
+
+/* =========================
+   TRANSACTION TYPE
+   ========================= */
+
+.admin-transaction-type {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 76px;
+    padding: 5px 9px;
+    border-radius: 999px;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.transaction-type-deposit {
+    background: #E8F4ED;
+    color: #287A5A;
+}
+
+.transaction-type-withdraw {
+    background: #F8EEE5;
+    color: #986032;
+}
+
+.transaction-type-transfer {
+    background: #EAF0F6;
+    color: #42647E;
+}
+
+/* =========================
+   AMOUNT
+   ========================= */
+
+.admin-transaction-amount {
+    color: #12382F;
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+/* =========================
+   STATUS
+   ========================= */
+
+.admin-transaction-status {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 68px;
+    padding: 5px 9px;
+    border-radius: 999px;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.transaction-status-success {
+    background: #E8F4ED;
+    color: #287A5A;
+}
+
+.transaction-status-failed {
+    background: #FBECEC;
+    color: #B54747;
+}
+
+/* =========================
+   DATE
+   ========================= */
+
+.admin-transaction-date {
+    color: #526761;
+    font-size: 12px;
+    line-height: 1.45;
+    white-space: nowrap;
+}
+
+/* =========================
+   VIEW ACTION
+   ========================= */
+
+.admin-transaction-view-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    color: #0E3B30;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+    transition:
+        color 0.2s ease,
+        gap 0.2s ease;
+}
+
+.admin-transaction-view-link:hover {
+    color: #A88B4A;
+    gap: 7px;
+}
+
+/* =========================
+   LOADING / EMPTY STATES
+   ========================= */
+
+.admin-transactions-state {
+    display: flex;
+    min-height: 300px;
+    padding: 40px 24px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.admin-transactions-state p {
+    margin: 12px 0 0;
+    color: #71817B;
+    font-size: 13px;
+}
+
+.admin-transactions-state h3 {
+    margin: 14px 0 0;
+    color: #12382F;
+    font-size: 16px;
+}
+
+.admin-transactions-empty-icon {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #EEF3F0;
+    color: #60736D;
+}
+
+.admin-transactions-state button {
+    margin-top: 18px;
+    padding: 9px 15px;
+    border: 1px solid #C9D5CF;
+    border-radius: 7px;
+    background: #FFFFFF;
+    color: #12382F;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.admin-transactions-state button:hover {
+    background: #F5F8F6;
+}
+
+.admin-transactions-loader {
+    width: 28px;
+    height: 28px;
+    border: 3px solid #D9E1DC;
+    border-top-color: #0E3B30;
+    border-radius: 50%;
+    animation: adminTransactionsSpin 0.8s linear infinite;
+}
+
+@keyframes adminTransactionsSpin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* =========================
+   PAGINATION
+   ========================= */
+
+.admin-transactions-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 15px 18px;
+    border-top: 1px solid #E7ECE9;
+    background: #FCFDFC;
+    box-sizing: border-box;
+}
+
+.admin-transactions-pagination > span {
+    color: #71817B;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.admin-transactions-pagination-buttons {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.admin-transactions-pagination-buttons button {
+    display: flex;
+    width: 34px;
+    height: 34px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #D1DCD6;
+    border-radius: 7px;
+    background: #FFFFFF;
+    color: #36574E;
+    cursor: pointer;
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.admin-transactions-pagination-buttons button:hover:not(:disabled) {
+    border-color: #AFC0B8;
+    background: #F4F7F5;
+    color: #0E3B30;
+}
+
+.admin-transactions-pagination-buttons button:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 1250px) {
+    .admin-transactions-filter-form {
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+    }
+
+    .admin-transactions-filter-actions {
+        grid-column: span 3;
+        justify-content: flex-start;
+    }
+
+    .admin-transactions-apply-button {
+        flex: 0 1 150px;
+    }
+}
+
+@media (max-width: 900px) {
+    .admin-transactions-filter-card {
+        padding: 18px;
+    }
+
+    .admin-transactions-filter-form {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .admin-transactions-filter-actions {
+        grid-column: span 2;
+    }
+
+    .admin-transactions-page-intro {
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 600px) {
+    .admin-transactions-filter-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .admin-transactions-filter-form {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-transactions-filter-actions {
+        grid-column: span 1;
+        width: 100%;
+    }
+
+    .admin-transactions-apply-button,
+    .admin-transactions-clear-button {
+        flex: 1;
+    }
+
+    .admin-transactions-page-intro {
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .admin-transactions-count {
+        align-items: flex-start;
+    }
+
+    .admin-transactions-page-intro h1 {
+        font-size: 24px;
+    }
+
+    .admin-transactions-error {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .admin-transactions-pagination {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}

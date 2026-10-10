@@ -1,0 +1,318 @@
+/* =========================
+   CUSTOMER FOOTER
+========================= */
+
+.customer-footer {
+    margin-top: 70px;
+
+    background: #0E3B30;
+
+    color: #ffffff;
+}
+
+
+/* =========================
+   MAIN FOOTER
+========================= */
+
+.customer-footer-container {
+    max-width: 1440px;
+
+    margin: 0 auto;
+
+    padding: 56px 40px 48px;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(280px, 1.8fr)
+        minmax(150px, 1fr)
+        minmax(150px, 1fr);
+
+    gap: 70px;
+}
+
+
+/* =========================
+   BRAND
+========================= */
+
+.footer-brand {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    color: #ffffff;
+
+    text-decoration: none;
+}
+
+.footer-brand-mark {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: #A88B4A;
+
+    color: #ffffff;
+
+    font-size: 20px;
+    font-weight: 800;
+
+    box-shadow:
+        0 6px 14px rgba(168, 139, 74, 0.25);
+}
+
+.footer-brand h2 {
+    margin: 0;
+
+    font-size: 19px;
+
+    font-weight: 800;
+
+    letter-spacing: -0.3px;
+}
+
+.footer-brand h2 span {
+    color: #E3CFA0;
+}
+
+.footer-brand p {
+    margin: 3px 0 0;
+
+    color: #B8C8C2;
+
+    font-size: 12px;
+
+    font-weight: 500;
+}
+
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.footer-description {
+    max-width: 360px;
+
+    margin: 20px 0 0;
+
+    color: #B8C8C2;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   SECURITY
+========================= */
+
+.footer-security {
+    margin: 20px 0 0;
+
+    color: #D4DDD9;
+
+    font-size: 13px;
+
+    font-weight: 500;
+}
+
+
+/* =========================
+   LINK SECTIONS
+========================= */
+
+.footer-links-section {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+}
+
+.footer-links-section h3 {
+    margin: 3px 0 18px;
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.5px;
+}
+
+.footer-links-section a,
+.footer-links-section span {
+    margin-bottom: 12px;
+
+    color: #B8C8C2;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.footer-links-section a:hover {
+    color: #E3CFA0;
+
+    transform: translateX(2px);
+}
+
+.footer-links-section span {
+    cursor: default;
+}
+
+
+/* =========================
+   BOTTOM BAR
+========================= */
+
+.customer-footer-bottom {
+    border-top: 1px solid #285247;
+}
+
+.customer-footer-bottom-container {
+    max-width: 1440px;
+
+    margin: 0 auto;
+
+    padding: 20px 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.customer-footer-bottom-container p {
+    margin: 0;
+
+    color: #8FA49C;
+
+    font-size: 12px;
+}
+
+.footer-legal-links {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.footer-legal-links span {
+    color: #8FA49C;
+
+    font-size: 12px;
+}
+
+.footer-dot {
+    color: #60736D !important;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    .customer-footer-container {
+        padding: 48px 24px;
+
+        grid-template-columns:
+            1.5fr 1fr 1fr;
+
+        gap: 35px;
+    }
+
+    .customer-footer-bottom-container {
+        padding: 18px 24px;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 650px) {
+
+    .customer-footer-container {
+        padding: 42px 20px;
+
+        grid-template-columns: 1fr;
+
+        gap: 34px;
+    }
+
+    .footer-description {
+        max-width: 100%;
+    }
+
+    .footer-links-section h3 {
+        margin-bottom: 14px;
+    }
+
+    .customer-footer-bottom-container {
+        padding: 20px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 12px;
+    }
+
+    .footer-legal-links {
+        flex-wrap: wrap;
+
+        gap: 8px;
+    }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 400px) {
+
+    .customer-footer-container {
+        padding: 36px 16px;
+    }
+
+    .customer-footer-bottom-container {
+        padding: 18px 16px;
+    }
+
+    .footer-brand h2 {
+        font-size: 17px;
+    }
+
+    .footer-description {
+        font-size: 13px;
+    }
+}

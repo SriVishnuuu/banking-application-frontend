@@ -1,0 +1,674 @@
+.account-details-page {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 32px 60px;
+}
+
+/* =========================
+   HEADER
+   ========================= */
+
+.account-details-header {
+    margin-bottom: 25px;
+}
+
+.details-back-link {
+    display: inline-block;
+    margin-bottom: 24px;
+    color: #A88B4A;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.details-back-link:hover {
+    text-decoration: underline;
+}
+
+.account-title-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.account-title-row h1 {
+    margin: 0;
+    color: #12382F;
+    font-size: 32px;
+}
+
+.details-account-number {
+    margin: 8px 0 0;
+    color: #60736D;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+}
+
+.details-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.details-status.active {
+    background: #E8F3ED;
+    color: #287A5A;
+}
+
+.details-status.inactive {
+    background: #EDF1EF;
+    color: #60736D;
+}
+
+.details-status.frozen {
+    background: #F8F1E3;
+    color: #8A6B2F;
+}
+
+.details-status.closed {
+    background: #FCEEEE;
+    color: #B54747;
+}
+
+/* =========================
+   BALANCE
+   ========================= */
+
+.account-balance-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    padding: 30px;
+    margin-bottom: 28px;
+    background: #0E3B30;
+    border-radius: 15px;
+    box-shadow: 0 8px 24px rgba(14, 59, 48, 0.18);
+}
+
+.balance-card-label {
+    margin: 0 0 8px;
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.1px;
+}
+
+.account-balance-card h2 {
+    margin: 0;
+    color: #FFFFFF;
+    font-size: 32px;
+    letter-spacing: 0.5px;
+}
+
+.balance-error {
+    margin: 8px 0 0;
+    color: #E3CFA0;
+    font-size: 12px;
+}
+
+/* =========================
+   BALANCE TOGGLE
+   ========================= */
+
+.balance-toggle-button {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    padding: 0;
+    border: 1px solid rgba(227, 207, 160, 0.35);
+    border-radius: 9px;
+    background: rgba(227, 207, 160, 0.12);
+    color: #FFFFFF;
+    cursor: pointer;
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.balance-toggle-button:hover {
+    background: rgba(227, 207, 160, 0.20);
+    border-color: rgba(227, 207, 160, 0.55);
+}
+
+.balance-toggle-button:disabled {
+    opacity: 0.65;
+    cursor: wait;
+}
+
+.balance-button-spinner {
+    animation: balance-button-spin 0.8s linear infinite;
+}
+
+@keyframes balance-button-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* =========================
+   SECTIONS
+   ========================= */
+
+.details-section {
+    padding: 28px;
+    margin-bottom: 22px;
+    background: #FFFFFF;
+    border: 1px solid #D9E1DC;
+    border-radius: 14px;
+    box-shadow: 0 4px 15px rgba(18, 56, 47, 0.04);
+}
+
+.details-section-heading {
+    margin-bottom: 22px;
+}
+
+.details-section-heading h2 {
+    margin: 0;
+    color: #12382F;
+    font-size: 21px;
+}
+
+/* =========================
+   INFORMATION GRID
+   ========================= */
+
+.details-info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.details-info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    padding-bottom: 17px;
+    border-bottom: 1px solid #E7ECE9;
+}
+
+.details-info-item span {
+    color: #8FA49C;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.details-info-item strong {
+    color: #12382F;
+    font-size: 14px;
+}
+
+.details-address {
+    grid-column: span 2;
+}
+
+/* =========================
+   ACCOUNT ACTION
+   ========================= */
+
+.account-action-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 25px 28px;
+    background: #F4F6F2;
+    border: 1px solid #D9E1DC;
+    border-radius: 14px;
+}
+
+.account-action-card h2 {
+    margin: 0;
+    color: #12382F;
+    font-size: 19px;
+}
+
+.account-action-card p:last-child {
+    max-width: 650px;
+    margin: 7px 0 0;
+    color: #60736D;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.danger-button {
+    flex-shrink: 0;
+    padding: 11px 18px;
+    border: none;
+    border-radius: 8px;
+    background: #B54747;
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.danger-button:hover {
+    background: #963D3D;
+}
+
+.danger-button:disabled {
+    opacity: 0.65;
+    cursor: wait;
+}
+
+/* =========================
+   TRANSACTION LIMITS
+   ========================= */
+
+.transaction-limits-section {
+    margin: 24px 0;
+}
+
+.account-section-heading {
+    margin-bottom: 22px;
+}
+
+.account-section-eyebrow {
+    margin: 0 0 6px;
+    color: #A88B4A;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+}
+
+.account-section-heading h2 {
+    margin: 0;
+    color: #12382F;
+    font-size: 21px;
+}
+
+.account-section-heading p {
+    margin: 7px 0 0;
+    color: #60736D;
+    font-size: 13px;
+}
+
+.transaction-limit-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.transaction-limit-card {
+    padding: 22px;
+    border: 1px solid #D9E1DC;
+    border-radius: 12px;
+    background: #F4F6F2;
+}
+
+.transaction-limit-type {
+    color: #60736D;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.transaction-limit-card h3 {
+    margin: 8px 0 2px;
+    color: #12382F;
+    font-size: 25px;
+}
+
+.transaction-limit-caption {
+    color: #8FA49C;
+    font-size: 12px;
+}
+
+.transaction-limit-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin: 22px 0 18px;
+}
+
+.transaction-limit-stats div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.transaction-limit-stats span {
+    color: #60736D;
+    font-size: 12px;
+}
+
+.transaction-limit-stats strong {
+    color: #12382F;
+    font-size: 14px;
+}
+
+.transaction-limit-progress {
+    width: 100%;
+    height: 7px;
+    border-radius: 999px;
+    background: #D9E1DC;
+    overflow: hidden;
+}
+
+.transaction-limit-progress-bar {
+    height: 100%;
+    border-radius: inherit;
+    background: #A88B4A;
+    transition: width 0.3s ease;
+}
+
+.limits-loading,
+.limits-error {
+    padding: 18px;
+    border-radius: 10px;
+    font-size: 13px;
+}
+
+.limits-loading {
+    background: #F4F6F2;
+    color: #60736D;
+}
+
+.limits-error {
+    border: 1px solid #E9BABA;
+    background: #FCEEEE;
+    color: #B54747;
+}
+
+/* =========================
+   MESSAGES
+   ========================= */
+
+.account-details-error-message,
+.account-details-success-message {
+    margin-bottom: 22px;
+    padding: 12px 15px;
+    border-radius: 8px;
+    font-size: 13px;
+}
+
+.account-details-error-message {
+    background: #FCEEEE;
+    border: 1px solid #E9BABA;
+    color: #B54747;
+}
+
+.account-details-success-message {
+    background: #E8F3ED;
+    border: 1px solid #B8D9C8;
+    color: #287A5A;
+}
+
+/* =========================
+   LOADING / ERROR
+   ========================= */
+
+.account-details-loading {
+    padding: 80px 20px;
+    text-align: center;
+    color: #60736D;
+}
+
+.account-details-error {
+    max-width: 500px;
+    margin: 80px auto;
+    padding: 35px;
+    text-align: center;
+    background: #FFFFFF;
+    border: 1px solid #D9E1DC;
+    border-radius: 14px;
+}
+
+.account-details-error h3 {
+    margin: 0;
+    color: #12382F;
+}
+
+.account-details-error p {
+    margin: 10px 0 20px;
+    color: #60736D;
+}
+
+/* =========================================
+   ACCOUNT STATUS CONFIRMATION OVERLAY
+   ========================================= */
+
+.account-status-confirmation-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: rgba(10, 35, 29, 0.48);
+    backdrop-filter: blur(3px);
+    box-sizing: border-box;
+}
+
+.account-status-confirmation-modal {
+    position: relative;
+    width: 100%;
+    max-width: 430px;
+    padding: 30px;
+    background: #FFFFFF;
+    border: 1px solid #D9E1DC;
+    border-radius: 14px;
+    box-shadow: 0 20px 50px rgba(14, 59, 48, 0.16);
+    box-sizing: border-box;
+    animation: account-status-modal-in 0.18s ease-out;
+}
+
+@keyframes account-status-modal-in {
+    from {
+        opacity: 0;
+        transform: translateY(8px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.account-status-confirmation-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: 1px solid #E1E7E3;
+    border-radius: 8px;
+    background: #F7F9F7;
+    color: #60736D;
+    cursor: pointer;
+}
+
+.account-status-confirmation-close:hover {
+    background: #EEF3F0;
+    color: #12382F;
+}
+
+.account-status-confirmation-close:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+.account-status-confirmation-icon {
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+    border: 1px solid #D9E1DC;
+    border-radius: 11px;
+    background: #E7EEEA;
+    color: #0E3B30;
+}
+
+.account-status-confirmation-modal h3 {
+    margin: 0 42px 9px 0;
+    color: #12382F;
+    font-size: 20px;
+    line-height: 1.3;
+    font-weight: 700;
+}
+
+.account-status-confirmation-modal > p {
+    margin: 0;
+    color: #60736D;
+    font-size: 13px;
+    line-height: 1.65;
+}
+
+.account-status-confirmation-modal > p strong {
+    color: #12382F;
+    font-weight: 700;
+}
+
+.account-status-confirmation-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 26px;
+}
+
+.account-status-confirmation-cancel,
+.account-status-confirmation-confirm {
+    min-height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding: 0 17px;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.account-status-confirmation-cancel {
+    border: 1px solid #D9E1DC;
+    background: #FFFFFF;
+    color: #60736D;
+}
+
+.account-status-confirmation-cancel:hover {
+    background: #F5F7F5;
+    color: #12382F;
+}
+
+.account-status-confirmation-confirm {
+    border: 1px solid #0E3B30;
+    background: #0E3B30;
+    color: #FFFFFF;
+}
+
+.account-status-confirmation-confirm:hover {
+    background: #123F33;
+    border-color: #123F33;
+}
+
+.account-status-confirmation-cancel:disabled,
+.account-status-confirmation-confirm:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.account-status-button-spinner {
+    animation: account-status-spin 0.8s linear infinite;
+}
+
+@keyframes account-status-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 700px) {
+    .account-details-page {
+        padding: 30px 18px 45px;
+    }
+
+    .account-title-row {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .account-title-row h1 {
+        font-size: 28px;
+    }
+
+    .account-balance-card {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .details-info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .details-address {
+        grid-column: span 1;
+    }
+
+    .account-action-card {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .account-action-card button {
+        width: 100%;
+    }
+
+    .transaction-limit-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 500px) {
+    .account-status-confirmation-overlay {
+        padding: 16px;
+    }
+
+    .account-status-confirmation-modal {
+        padding: 25px 21px;
+        border-radius: 12px;
+    }
+
+    .account-status-confirmation-modal h3 {
+        font-size: 18px;
+    }
+
+    .account-status-confirmation-actions {
+        flex-direction: column-reverse;
+    }
+
+    .account-status-confirmation-cancel,
+    .account-status-confirmation-confirm {
+        width: 100%;
+    }
+
+    .transaction-limit-card {
+        padding: 18px;
+    }
+
+    .transaction-limit-stats {
+        grid-template-columns: 1fr;
+    }
+}
