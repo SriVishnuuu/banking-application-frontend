@@ -1,4 +1,4 @@
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import "./App.css"
 
 import Login from "./pages/auth/Login";
@@ -34,17 +34,15 @@ import AdminTransactions from "./pages/admin/AdminTransactions";
 import AdminTransactionDetails from "./pages/admin/AdminTransactionDetails";
 import AdminAuditLogs from "./pages/admin/AdminAuditLogs";
 import AdminAuditLogDetails from "./pages/admin/AdminAuditLogDetails";
-import LoadingScreen from "./components/common/LoadingScreen";
+import NotFound from "./pages/NotFound";
 
 function App() {
 
     return (
         <Routes>
 
-            {/* Public */}
+            
             <Route path="/login" element={<Login />} />
-
-            <Route path="/loading" element={<LoadingScreen />} />
 
             <Route path="/register" element={<Register />} />
 
@@ -159,11 +157,7 @@ function App() {
 
             </Route>
 
-            {/* Unknown URL */}
-            <Route
-                path="*"
-                element={<Navigate to="/login" replace />}
-            />
+            <Route path="*" element={<NotFound />} />
 
         </Routes>
     );

@@ -1,0 +1,131 @@
+.not-found-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: #f3f6fb;
+    box-sizing: border-box;
+}
+
+.not-found-card {
+    width: 100%;
+    max-width: 480px;
+    padding: 48px 36px 28px;
+    text-align: center;
+    background: #ffffff;
+    border: 1px solid #e4e9f1;
+    border-radius: 20px;
+    box-shadow: 0 12px 40px rgba(15, 35, 65, 0.08);
+    box-sizing: border-box;
+}
+
+.not-found-code {
+    color: #132b50;
+    font-size: clamp(64px, 12vw, 96px);
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -4px;
+}
+
+.not-found-icon {
+    width: 54px;
+    height: 54px;
+    margin: 24px auto 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #fff3dc;
+    color: #a66a00;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.not-found-icon span {
+    line-height: 1;
+}
+
+.not-found-card h1 {
+    margin: 0 0 14px;
+    color: #172b4d;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.not-found-message {
+    max-width: 360px;
+    margin: 0 auto;
+    color: #667085;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.not-found-actions {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.not-found-actions button {
+    min-height: 44px;
+    padding: 0 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.not-found-actions button:hover {
+    transform: translateY(-1px);
+}
+
+.not-found-primary {
+    border: 1px solid #132b50;
+    background: #132b50;
+    color: #ffffff;
+}
+
+.not-found-primary:hover {
+    background: #1d3d6b;
+}
+
+.not-found-secondary {
+    border: 1px solid #d0d5dd;
+    background: #ffffff;
+    color: #344054;
+}
+
+.not-found-secondary:hover {
+    background: #f8fafc;
+}
+
+.not-found-footer {
+    margin-top: 36px;
+    padding-top: 20px;
+    border-top: 1px solid #eaecf0;
+    color: #98a2b3;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+}
+
+@media (max-width: 480px) {
+    .not-found-card {
+        padding: 36px 22px 24px;
+    }
+
+    .not-found-card h1 {
+        font-size: 24px;
+    }
+
+    .not-found-actions {
+        flex-direction: column;
+    }
+
+    .not-found-actions button {
+        width: 100%;
+    }
+}
